@@ -1,0 +1,14 @@
+.travelNotes {
+    background-color: #E19797;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .aTravelNote {
+      flex-basis: 28%;
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid white;
+      background-color: white;
+  }
