@@ -17,13 +17,13 @@ export const ZuringTheWorld = () => (
                     </>
                   );
                 } else {
-                  return <Redirect to="/getStarted" />;
+                  return <Redirect to="/" />;
                 }
             }}
         />
-        <Route path="/getStarted">
+        {/* <Route path="/">
             <GetStartedPage />
-        </Route>
+        </Route> */}
         {/* <Route path="/register">
             <Register />
         </Route> */}

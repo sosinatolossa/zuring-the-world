@@ -13,3 +13,8 @@
     background-color: white;
     border-radius: .5rem;
   }
+
+.aTravelNote__details {
+    background-color: #E19797;
+    color: red;
+}

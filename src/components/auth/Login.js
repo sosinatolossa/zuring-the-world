@@ -36,7 +36,6 @@ export const Login = props => {
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
             </dialog>
 
-            <h1>Zurīng the World</h1>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <h2>Please sign in</h2>
@@ -55,9 +54,9 @@ export const Login = props => {
                     </fieldset>
                 </form>
             </section>
-            <section className="link--register">
+            {/* <section className="link--register">
                 <Link to="/register">Not a member yet?</Link>
-            </section>
+            </section> */}
         </main>
     )
 }

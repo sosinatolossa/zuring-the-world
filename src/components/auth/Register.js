@@ -56,7 +56,7 @@ export const Register = (props) => {
             </dialog>
 
             <section>
-                <form className="form--login" onSubmit={handleRegister}>
+                <form className="form--register" onSubmit={handleRegister}>
                     <h2 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h2>
                     <fieldset>
                         <label htmlFor="firstName"> First Name </label>

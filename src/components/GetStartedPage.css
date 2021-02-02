@@ -1,4 +1,9 @@
 #root {
     display: flex;
     /* display-content: space-between; */
+    flex-direction: column;
+}
+
+.getStartedPage {
+    display: flex;
 }
