@@ -2,11 +2,14 @@ import React, { useContext, useEffect } from "react"
 // we're importing the context object we created in the provider component so that the Context hook can access the objects it exposes
 import { TravelNoteContext } from "./TravelNoteProvider"
 import { TravelNoteCard } from "./TravelNoteCard"
+import { useHistory, useParams } from 'react-router-dom';
 import "./TravelNote.css"
 
 export const TravelNoteList = () => {
     //This state changes when we invoke getTravelNotes below
     const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
+
+    const history = useHistory()
 
     //we're reaching out to the world to get travel notes which is out travelNotes api
     useEffect(() => {
@@ -15,11 +18,29 @@ export const TravelNoteList = () => {
 
     return (
         <div className="travelNotes">
+
+            <fieldset>
+                <div className="location">
+                    <label htmlFor="location">City </label>
+                     <input type="text" name="location" id="city" value={travelNotes.location}/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <label for="travelDate">Date </label>
+                <input type="date" name="travelDate" id="date" value={travelNotes.date}/>
+            </fieldset>
+
+            <button onClick={() => {history.push("/travelNotes/create")}}>
+                Details
+            </button>
+
             {
                 // we will use .map method to iterate our travelNotes array and generate HTML for each object
                 // for that we'll invoke our HTML converter TravelNoteCard component
                 travelNotes.map(aTravelNote => {
-                    return <TravelNoteCard key={aTravelNote.id} aTravelNote={aTravelNote} />
+
+                    return <TravelNoteCard key={aTravelNote.id} 
+                                        aTravelNote={aTravelNote} />
                 })
             }
         </div>

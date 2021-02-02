@@ -1,4 +1,4 @@
 #root {
-    /* display: flex; */
-    
+    display: flex;
+    /* display-content: space-between; */
 }
