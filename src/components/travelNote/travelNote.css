@@ -3,6 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 15px;
+    border-radius: .5rem;
 }
 
 .aTravelNote {
@@ -17,4 +19,17 @@
 .aTravelNote__details {
     background-color: #E19797;
     color: red;
+}
+
+.travelNoteForm {
+    background-color: #E19797;
+    margin: 55px;
+    border-radius: .5rem;
+    flex-wrap: wrap;
+    
+}
+
+.form-group {
+    margin: 15px;
+    border-radius: .5rem;
 }
