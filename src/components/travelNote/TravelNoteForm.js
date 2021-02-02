@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
-import { TravelNoteContext } from "../travelNote/TravelNoteProvider"
+import { TravelNoteContext } from "./TravelNoteProvider"
 import "./TravelNote.css"
 import { useHistory } from 'react-router-dom';
 
@@ -53,60 +53,40 @@ export const TravelNoteForm = () => {
       const planeTicketPrice = parseInt(travelNote.planeTicketPrice)
       const costOnFood = parseInt(travelNote.costOnFood)
       const costOnHotel = parseInt(travelNote.costOnHotel)
-      const noteDetails = travelNote.notesDetails
+      const noteDetails = travelNote.noteDetails
       const overallExperience = parseInt(travelNote.overallExperience)
 
       if (planeTicketPrice === 0) {
-        window.alert("Please type in a price")
-      } else {
-        //invoke addTravelNote passing TravelNote as an argument.
-        //once complete, change the url and display the TravelNote list
+        window.alert("Please type in plane ticket price")
+      }
+
+      else if (costOnFood === 0) {
+        window.alert("Please type in total cost on food")
+      }
+ 
+      else if (costOnHotel === 0) {
+        window.alert("Please type in total cost on hotel")
+      } 
+
+      else if (noteDetails === "") {
+        window.alert("Please describe your traveling experiences")
+      }
+
+      else if (overallExperience === 0) {
+        window.alert("Please rate your overall travel experience")
+      }
+
+      else {
+         //invoke addTravelNote passing TravelNote as an argument.
+         //once complete, change the url and display the TravelNote list
         addTravelNote(travelNote)
         .then(() => history.push("/travelNotes"))
       }
-
-    //   if (costOnFood === 0) {
-    //      window.alert("Please type in a price")
-    //    } else {
-    //      //invoke addTravelNote passing TravelNote as an argument.
-    //      //once complete, change the url and display the TravelNote list
-    //      addTravelNote(travelNote)
-    //      .then(() => history.push("/travelNotes"))
-    //    }
- 
-    //   if (costOnHotel === 0) {
-    //      window.alert("Please type in a price")
-    //     } else {
-    //      //invoke addTravelNote passing TravelNote as an argument.
-    //      //once complete, change the url and display the TravelNote list
-    //      addTravelNote(travelNote)
-    //      .then(() => history.push("/travelNotes"))
-    //    }
-
-    //   if (noteDetails === "") {
-    //     window.alert("Please describe your traveling experiences")
-    //   } else {
-    //     //invoke addTravelNote passing TravelNote as an argument.
-    //     //once complete, change the url and display the TravelNote list
-    //     addTravelNote(travelNote)
-    //     .then(() => history.push("/travelNotes"))
-    //   }
-
-    //   if (overallExperience === 0) {
-    //     window.alert("Please rate your travel experience")
-    //   } else {
-    //     //invoke addTravelNote passing TravelNote as an argument.
-    //     //once complete, change the url and display the TravelNote list
-    //     addTravelNote(travelNote)
-    //     .then(() => history.push("/travelNotes"))
-    //   }
-    }
+   }
   
 
     return (
       <form className="travelNoteForm">
-          <h2 className="TravelNoteForm__title">New Travel Note</h2>
-
           {/* <fieldset>
               <div className="form-group">
                   <label htmlFor="location">City: </label>
@@ -120,6 +100,8 @@ export const TravelNoteForm = () => {
                   <input type="date" id="date" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Date" value={travelNote.date}/>
               </div>
           </fieldset> */}
+          <h2 className="TravelNoteForm__title">New Travel Note</h2>
+
 
           <fieldset>
               <div className="form-group">
@@ -130,14 +112,14 @@ export const TravelNoteForm = () => {
 
           <fieldset>
               <div className="form-group">
-                  <label htmlFor="costOnFood">Cost on food: </label>
+                  <label htmlFor="costOnFood">Total cost on food: </label>
                   <input type="text" id="costOnFood" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost on food" value={travelNote.costOnFood}/>
               </div>
           </fieldset>
 
           <fieldset>
               <div className="form-group">
-                  <label htmlFor="costOnHotel">Cost on hotel: </label>
+                  <label htmlFor="costOnHotel">Total money spent on hotel: </label>
                   <input type="text" id="costOnHotel" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost on hotel" value={travelNote.costOnHotel}/>
               </div>
           </fieldset>
