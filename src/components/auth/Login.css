@@ -11,9 +11,10 @@
     Height: 70px;
     Top: -518px;
     Left: 2180px;    
-    margin-left: 500px;
+    margin-top: 50px;
     margin-right: 500px;
-    
+    margin-left: 500px;
+    text-align: center;
 }
 
 fieldset {
@@ -23,7 +24,7 @@ fieldset {
     border: 0;
 }
 
-.form--login {
+.form--login, .form--register {
     display: inline-block;
     margin: 0 auto;
     text-align: left;
@@ -60,18 +61,19 @@ fieldset {
     text-align: center;
 }
 
-.form--login {
-    background-position-x: right;
+.form--login, .form--register {
+    /* background-position-x: right; */
     /* background-image: url(logo.png); */
     z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
+    min-width: 35rem;
     background-color: #E19797;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     padding: 10px;
     border: 2px solid #ced4da;
     border-radius: .25rem;
+    flex-wrap: wrap;
+    margin: 50px;
 }
 
 .button--close {

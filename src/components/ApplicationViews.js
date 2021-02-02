@@ -1,13 +1,19 @@
 import React from "react"
 import { Route } from "react-router-dom"
-// import { Home } from "./Home"
+import { GetStartedPage } from "./GetStartedPage"
+
 import { TravelNoteProvider } from "./travelNote/TravelNoteProvider"
 import { TravelNoteList } from "./travelNote/TravelNoteList"
 import { TravelNoteForm } from "./travelNote/TravelNoteForm"
 
+
 export const ApplicationViews = () => {
     return (
         <>
+        {/* Render the location list when http://localhost:3000/ */}
+        <Route exact path="/">
+                <GetStartedPage />
+            </Route>
         <TravelNoteProvider>
             <Route exact path="/travelNotes">
                 <TravelNoteList />
