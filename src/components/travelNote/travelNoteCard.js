@@ -3,7 +3,7 @@ import "./TravelNote.css"
 
 export const TravelNoteCard = ({ aTravelNote }) => (
     <section className="aTravelNote">
-        <h3 className="aTravelNote__location">Location: { aTravelNote.location }</h3>
+        <h3 className="aTravelNote__location">City: { aTravelNote.location }</h3>
         <div className="aTravelNote__date">Date: { aTravelNote.date }</div>
         <div className="aTravelNote__planeTicketPrice">Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
         <div className="aTravelNote__costOnFood">Total money spent on food: ${ aTravelNote.costOnFood }</div>

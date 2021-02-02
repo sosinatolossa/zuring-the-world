@@ -22,12 +22,17 @@ export const TravelNoteProvider = (props) => {
             },
             body: JSON.stringify(travelNoteObj) //puts our objects in strings
         })
-        .then(getTravelNotes)
+        .then(response => response.json)
+
+        // const getTravelNoteById = (id) => {
+        //     return fetch(`http://localhost:8088/travelNotes/${id}`)
+        //         .then(res => res.json())
+        // }
     }
 
     return ( //we will return the functions we created above through TravelNoteContext. The other components(children) can access the array of objects we stored in travelNotes and invoke the functions we created above
         <TravelNoteContext.Provider value={{
-            travelNotes, getTravelNotes, addTravelNote
+            travelNotes, getTravelNotes, addTravelNote //, getTravelNoteById
         }}>
             {props.children}
         </TravelNoteContext.Provider>

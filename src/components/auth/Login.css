@@ -1,7 +1,6 @@
 .h1, h1 {
     font-size: 2.5rem;
     font-style: italic;
-    /* border: 2px solid hsl(0, 0%, 100%); */
     background-color: rgb(247, 239, 239);
     color: #674646;
     background-clip: padding-box;
@@ -12,6 +11,8 @@
     Height: 70px;
     Top: -518px;
     Left: 2180px;    
+    margin-left: 500px;
+    margin-right: 500px;
     
 }
 
@@ -69,6 +70,8 @@ fieldset {
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     padding: 10px;
+    border: 2px solid #ced4da;
+    border-radius: .25rem;
 }
 
 .button--close {
