@@ -87,7 +87,8 @@ export const TravelNoteForm = () => {
 
     return (
       <form className="travelNoteForm">
-          {/* <fieldset>
+          <h2 className="travelNoteForm__title">New travel note</h2>
+          <fieldset>
               <div className="form-group">
                   <label htmlFor="location">City: </label>
                   <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="City visited" value={travelNote.location}/>
@@ -96,12 +97,14 @@ export const TravelNoteForm = () => {
 
           <fieldset>
               <div className="form-group">
-                  <label htmlFor="date">Plane ticket price: </label>
-                  <input type="date" id="date" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Date" value={travelNote.date}/>
+                  <label htmlFor="startDate">From: </label>
+                  <input type="date" id="startDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start date" value={travelNote.startDate}/>
               </div>
-          </fieldset> */}
-          <h2 className="TravelNoteForm__title">New Travel Note</h2>
-
+              <div className="form-group">
+                  <label htmlFor="endDate">To: </label>
+                  <input type="date" id="endDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="End date" value={travelNote.endDate}/>
+              </div>
+          </fieldset>
 
           <fieldset>
               <div className="form-group">

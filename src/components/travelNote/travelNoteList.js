@@ -17,32 +17,23 @@ export const TravelNoteList = () => {
     }, []) //first time this runs, our array should be empty so it won't be infinite loop and that's what we're doing here
 
     return (
-        <div className="travelNotes">
+        <div>
+        <button onClick={() => {history.push("/travelNotes/create")}}>
+            Add new travel note
+        </button>
 
-            <fieldset>
-                <div className="location">
-                    <label htmlFor="location">City </label>
-                     <input type="text" name="location" id="city" value={travelNotes.location}/>
-                </div>
-            </fieldset>
-            <fieldset>
-                <label for="travelDate">Date </label>
-                <input type="date" name="travelDate" id="date" value={travelNotes.date}/>
-            </fieldset>
+            <section className="travelNotes">
 
-            <button onClick={() => {history.push("/travelNotes/create")}}>
-                Details
-            </button>
+                {
+                    // we will use .map method to iterate our travelNotes array and generate HTML for each object
+                    // for that we'll invoke our HTML converter TravelNoteCard component
+                    travelNotes.map(aTravelNote => {
 
-            {
-                // we will use .map method to iterate our travelNotes array and generate HTML for each object
-                // for that we'll invoke our HTML converter TravelNoteCard component
-                travelNotes.map(aTravelNote => {
-
-                    return <TravelNoteCard key={aTravelNote.id} 
-                                        aTravelNote={aTravelNote} />
-                })
-            }
+                        return <TravelNoteCard key={aTravelNote.id} 
+                                            aTravelNote={aTravelNote} />
+                    })
+                }
+            </section>
         </div>
     )
 }
