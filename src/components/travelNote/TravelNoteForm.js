@@ -149,7 +149,7 @@ export const TravelNoteForm = () => {
           
           <button className="btn btn-primary"
             onClick={handleClickSaveTravelNote}>
-            Save details
+            Save note
           </button>
       </form>
     )
