@@ -26,6 +26,9 @@ export const TravelNoteCard = ({ aTravelNote }) => {
             <div className="aTravelNote__notesDetails"> Notes: { aTravelNote.noteDetails }</div>
             <div className="aTravelNote__overallExperience">Overall experience: { aTravelNote.overallExperience }</div>
             <button onClick={handleDelete}>Delete note</button>
+            <button onClick={() => {
+                history.push(`/travelNotes/${aTravelNote.id}`)
+            }}>Edit</button>
         </section>
     )
 }

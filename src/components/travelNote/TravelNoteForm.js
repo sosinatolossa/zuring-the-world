@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react"
 import { TravelNoteContext } from "./TravelNoteProvider"
 import "./TravelNote.css"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 export const TravelNoteForm = () => {
-    const { addTravelNote } = useContext(TravelNoteContext)
+    const { addTravelNote, getTravelNoteById, updateTravelNote } = useContext(TravelNoteContext)
     const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
 
     /*
@@ -13,23 +13,25 @@ export const TravelNoteForm = () => {
     Define the initial state of the form inputs with useState()
     */
 
+    //for edit, hold on to state of travelNote in this view
     const [travelNote, setTravelNote] = useState({
+      location: "",
+      startDate: "",
+      endDate: "",
       planeTicketPrice: 0,
       costOnFood: 0,
       costOnHotel: 0,
       noteDetails: "",
       overallExperience: 0
     });
+    //wait for data before button is active
+    const [isLoading, setIsLoading] = useState(true);
 
-    const history = useHistory();
+    // Now that the form can be used for editing as well as adding a travel note, you need access to the travel note id for fetching the travel note you want to edit
+    const {travelNoteId} = useParams();
+	  const history = useHistory();
 
-    /*
-    Reach out to the world and get customers state
-    and locations state on initialization.
-    */
-    useEffect(() => {
-      getTravelNotes()
-    }, [])
+
 
     //when a field changes, update state. The return will re-render and display based on the values in state
     //Controlled component
@@ -37,7 +39,6 @@ export const TravelNoteForm = () => {
       /* When changing a state object or array,
       always create a copy, make changes, and then set state.*/
       const newTravelNote = { ...travelNote }
-      let selectedVal = event.target.value
 
       /* TravelNote is an object with properties.
       Set the property to the new value
@@ -47,16 +48,31 @@ export const TravelNoteForm = () => {
       setTravelNote(newTravelNote)
     }
 
-    const handleClickSaveTravelNote = (event) => {
-      event.preventDefault() //Prevents the browser from submitting the form
+    const handleClickSaveTravelNote = () => {
+      // event.preventDefault() //Prevents the browser from submitting the form
 
+      const location = travelNote.location
+      const startDate = travelNote.startDate
+      const endDate = travelNote.endDate
       const planeTicketPrice = parseInt(travelNote.planeTicketPrice)
       const costOnFood = parseInt(travelNote.costOnFood)
       const costOnHotel = parseInt(travelNote.costOnHotel)
       const noteDetails = travelNote.noteDetails
       const overallExperience = parseInt(travelNote.overallExperience)
 
-      if (planeTicketPrice === 0) {
+      if (location === "") {
+        window.alert("Please type in name of city you visited")
+      }
+
+      else if (startDate === "") {
+        window.alert("Please type in start date")
+      }
+
+      else if (endDate === "") {
+        window.alert("Please type in end date")
+      }
+
+      else if (planeTicketPrice === 0) {
         window.alert("Please type in plane ticket price")
       }
 
@@ -77,17 +93,59 @@ export const TravelNoteForm = () => {
       }
 
       else {
-         //invoke addTravelNote passing TravelNote as an argument.
-         //once complete, change the url and display the TravelNote list
-        addTravelNote(travelNote)
-        .then(() => history.push("/travelNotes"))
+         //disable the button - no extra clicks
+        setIsLoading(true);
+        if (travelNoteId){
+          //PUT - update
+          updateTravelNote({
+              id: travelNote.id,
+              location: travelNote.location,
+              startDate: travelNote.startDate,
+              endDate: travelNote.endDate,
+              costOnFood: travelNote.costOnFood,
+              costOnHotel: travelNote.costOnHotel,
+              noteDetails: travelNote.noteDetails,
+              overallExperience: travelNote.overallExperience
+          })
+          .then(() => history.push(`/travelNotes/${travelNote.id}`))
+        } else {
+          //POST - add
+          addTravelNote({
+            location: travelNote.location,
+            startDate: travelNote.startDate,
+            endDate: travelNote.endDate,
+            costOnFood: travelNote.costOnFood,
+            costOnHotel: travelNote.costOnHotel,
+            noteDetails: travelNote.noteDetails,
+            overallExperience: travelNote.overallExperience
+          })
+          .then(() => history.push("/travelNotes"))
+        }
       }
    }
+
+
+    /*
+    Reach out to the world and get travel notes state
+    and locations state on initialization.
+    */
+   useEffect(() => {
+    if (travelNoteId) {
+      getTravelNoteById(travelNoteId)
+      .then(travelNote => {
+        setTravelNote(travelNote)
+        setIsLoading(false)
+      })
+    } else {
+      setIsLoading(false)
+    }
+
+  }, [])
   
 
     return (
       <form className="travelNoteForm">
-          <h2 className="travelNoteForm__title">New travel note</h2>
+          <h2 className="travelNoteForm__title">{travelNoteId ? "Edit travel note" : "Add new travel note"}</h2>
           <fieldset>
               <div className="form-group">
                   <label htmlFor="location">City: </label>
@@ -148,9 +206,12 @@ export const TravelNoteForm = () => {
           </fieldset>
           
           <button className="btn btn-primary"
-            onClick={handleClickSaveTravelNote}>
-            Save note
-          </button>
+            disabled={isLoading}
+            onClick={event => {
+              event.preventDefault()
+              handleClickSaveTravelNote()
+            }}>
+            {travelNoteId ? <>Save note</> : <>Add note</>}</button>
       </form>
     )
 }
