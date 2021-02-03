@@ -5,11 +5,16 @@ import { TravelNoteCard } from "./TravelNoteCard"
 import { useHistory, useParams } from 'react-router-dom';
 import "./TravelNote.css"
 
+
 export const TravelNoteList = () => {
     //This state changes when we invoke getTravelNotes below
     const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
 
     const history = useHistory()
+
+    //sees who's logged in
+    const currentUser = parseInt(localStorage.getItem("ZuringTheWorld_user"))
+    
 
     //we're reaching out to the world to get travel notes which is out travelNotes api
     useEffect(() => {
@@ -24,11 +29,12 @@ export const TravelNoteList = () => {
 
             <section className="travelNotes">
 
-                {
+                {   
+
+                    // we're using .filter method so we can filter through the notes with the user then
                     // we will use .map method to iterate our travelNotes array and generate HTML for each object
                     // for that we'll invoke our HTML converter TravelNoteCard component
-                    travelNotes.map(aTravelNote => {
-
+                    travelNotes.filter( aTravelNote => aTravelNote.usersId === currentUser).map(aTravelNote => {
                         return <TravelNoteCard key={aTravelNote.id} 
                                             aTravelNote={aTravelNote} />
                     })
