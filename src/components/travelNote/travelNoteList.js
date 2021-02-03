@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react"
 // we're importing the context object we created in the provider component so that the Context hook can access the objects it exposes
+import { Link } from "react-router-dom";
 import { TravelNoteContext } from "./TravelNoteProvider"
 import { TravelNoteCard } from "./TravelNoteCard"
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import "./TravelNote.css"
 
 
@@ -23,9 +24,15 @@ export const TravelNoteList = () => {
 
     return (
         <div>
-        <button onClick={() => {history.push("/travelNotes/create")}}>
-            Add new travel note
-        </button>
+            <button className="link--logout">
+                    <Link to="/">Log out</Link>
+            </button>
+
+            <h1>Zurīng the World</h1>
+            
+            <button className="addNewTravelNoteBtn" onClick={() => {history.push("/travelNotes/create")}}>
+                Add new travel note
+            </button>
 
             <section className="travelNotes">
 

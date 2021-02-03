@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
 import "./Login.css"
 
@@ -54,9 +53,6 @@ export const Login = props => {
                     </fieldset>
                 </form>
             </section>
-            {/* <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
-            </section> */}
         </main>
     )
 }
