@@ -21,6 +21,7 @@ export const ApplicationViews = () => {
             <Route exact path="/travelNotes/create">
                 <TravelNoteForm />
             </Route>
+            {/* hhb */}
             <Route path="/travelNotes/edit/:travelNoteId(\d+)">
                 <TravelNoteForm />
             </Route>
