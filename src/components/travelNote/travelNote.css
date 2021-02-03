@@ -25,11 +25,50 @@
     background-color: #E19797;
     margin: 55px;
     border-radius: .5rem;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;   
 }
 
 .form-group {
     margin: 15px;
+    border-radius: .3rem;
+    align-items: stretch;
+}
+
+.link--close {
+    margin-right: 5px;
+    padding: 2px;
+    margin-top: 10px;
+    float: right;
+}
+
+.addNewTravelNoteBtn {
+    margin-top: 23px;
+    margin-left: 15px;
+    margin-right: 23px;
+    border-radius: .3rem;
+}
+.link--logout {
+    margin: 10px;
+    float: right;
+    border-radius: .3rem;
+}
+
+.deleteBtn {
+    float: right;
+    margin-top: 5px;
+    border-radius: .3rem;
+}
+
+.editBtn {
+    margin-top: 5px;
+    border-radius: .3rem;
+}
+
+.travelNoteForm__title {
+    margin-left: 10px;
+}
+
+.btn-primary {
+    margin: 5px;
     border-radius: .3rem;
 }

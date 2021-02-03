@@ -28,8 +28,8 @@ export const TravelNoteCard = ({ aTravelNote }) => {
             <div className="aTravelNote__costOnHotel">Total money spent on hotel: ${ aTravelNote.costOnHotel }</div>
             <div className="aTravelNote__notesDetails"> Notes: { aTravelNote.noteDetails }</div>
             <div className="aTravelNote__overallExperience">Overall experience: { aTravelNote.overallExperience }</div>
-            <button onClick={handleDelete}>Delete note</button>
-            <button onClick={() => {
+            <button className="deleteBtn" onClick={handleDelete}>Delete note</button>
+            <button className="editBtn" onClick={() => {
                 history.push(`/travelNotes/edit/${aTravelNote.id}`)
             }}>Edit</button>
         </section>
