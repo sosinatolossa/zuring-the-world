@@ -5,7 +5,7 @@ import { useHistory, useParams } from 'react-router-dom';
 
 export const TravelNoteForm = () => {
     const { addTravelNote, getTravelNoteById, updateTravelNote } = useContext(TravelNoteContext)
-    const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
+    // const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
 
     /*
     With React, we do not target the DOM with `document.querySelector()`. Instead, our return (render) reacts to state or props.
@@ -29,7 +29,7 @@ export const TravelNoteForm = () => {
 
     // Now that the form can be used for editing as well as adding a travel note, you need access to the travel note id for fetching the travel note you want to edit
     const {travelNoteId} = useParams();
-	  const history = useHistory();
+	        const history = useHistory();
 
 
 
@@ -95,25 +95,27 @@ export const TravelNoteForm = () => {
       else {
          //disable the button - no extra clicks
         setIsLoading(true);
-        if (travelNoteId){
+        if (travelNoteId){   
           //PUT - update
           updateTravelNote({
               id: travelNote.id,
               location: travelNote.location,
               startDate: travelNote.startDate,
               endDate: travelNote.endDate,
+              planeTicketPrice: travelNote.planeTicketPrice,
               costOnFood: travelNote.costOnFood,
               costOnHotel: travelNote.costOnHotel,
               noteDetails: travelNote.noteDetails,
               overallExperience: travelNote.overallExperience
           })
-          .then(() => history.push(`/travelNotes/${travelNote.id}`))
+          .then(() => history.push(`/travelNotes`))
         } else {
           //POST - add
           addTravelNote({
             location: travelNote.location,
             startDate: travelNote.startDate,
             endDate: travelNote.endDate,
+            planeTicketPrice: travelNote.planeTicketPrice,
             costOnFood: travelNote.costOnFood,
             costOnHotel: travelNote.costOnHotel,
             noteDetails: travelNote.noteDetails,
@@ -211,7 +213,7 @@ export const TravelNoteForm = () => {
               event.preventDefault()
               handleClickSaveTravelNote()
             }}>
-            {travelNoteId ? <>Save note</> : <>Add note</>}</button>
+          {travelNoteId ? "Save note" : "Add note"}</button>
       </form>
     )
 }
