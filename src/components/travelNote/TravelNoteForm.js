@@ -5,7 +5,6 @@ import { useHistory, useParams } from 'react-router-dom';
 
 export const TravelNoteForm = () => {
     const { addTravelNote, getTravelNoteById, updateTravelNote } = useContext(TravelNoteContext)
-    // const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
 
     /*
     With React, we do not target the DOM with `document.querySelector()`. Instead, our return (render) reacts to state or props.
@@ -47,19 +46,24 @@ export const TravelNoteForm = () => {
       // update state
       setTravelNote(newTravelNote)
     }
+    useEffect(() => {
+      console.log("travelNote", travelNote)
+      }, [travelNote])
 
     const handleClickSaveTravelNote = () => {
-      // event.preventDefault() //Prevents the browser from submitting the form
+      
+      const [startYear, startMonth, startDay] = travelNote.startDate.split("-"); 
+      const [endYear, endMonth, endDay] = travelNote.endDate.split("-");
 
       const location = travelNote.location
-      const startDate = travelNote.startDate
-      const endDate = travelNote.endDate
+      const startDate = startMonth + "-" + startDay + "-" + startYear
+      const endDate = endMonth + "-" + endDay + "-" + endYear
       const planeTicketPrice = parseInt(travelNote.planeTicketPrice)
       const costOnFood = parseInt(travelNote.costOnFood)
       const costOnHotel = parseInt(travelNote.costOnHotel)
       const noteDetails = travelNote.noteDetails
       const overallExperience = parseInt(travelNote.overallExperience)
-
+      debugger
       if (location === "") {
         window.alert("Please type in name of city you visited")
       }
@@ -72,15 +76,16 @@ export const TravelNoteForm = () => {
         window.alert("Please type in end date")
       }
 
-      else if (planeTicketPrice === 0) {
+      //plane ticket price is 0 or not a number, alert user with message
+      else if (planeTicketPrice === 0 || planeTicketPrice === NaN) {
         window.alert("Please type in plane ticket price")
       }
 
-      else if (costOnFood === 0) {
+      else if (costOnFood === 0 || costOnFood === NaN) {
         window.alert("Please type in total cost on food")
       }
  
-      else if (costOnHotel === 0) {
+      else if (costOnHotel === 0 || costOnHotel === NaN) {
         window.alert("Please type in total cost on hotel")
       } 
 
@@ -94,34 +99,34 @@ export const TravelNoteForm = () => {
 
       else {
          //disable the button - no extra clicks
-        setIsLoading(true);
-        if (travelNoteId){   
+        setIsLoading(true); //this ensures the user cannot repeatedly click the button while the API is being updated
+        if (travelNoteId){   //if this is the note that already exists in our api
           //PUT - update
-          updateTravelNote({
+          updateTravelNote({ //the notes will be populated the input fields with current values from the api
               id: travelNote.id,
               location: travelNote.location,
-              startDate: travelNote.startDate,
-              endDate: travelNote.endDate,
+              startDate: startDate,
+              endDate: endDate,
               planeTicketPrice: travelNote.planeTicketPrice,
               costOnFood: travelNote.costOnFood,
               costOnHotel: travelNote.costOnHotel,
               noteDetails: travelNote.noteDetails,
               overallExperience: travelNote.overallExperience
           })
-          .then(() => history.push(`/travelNotes`))
+          .then(() => history.push(`/travelNotes`)) //then push it to the travel notes list
         } else {
           //POST - add
-          addTravelNote({
+          addTravelNote({ //if not, this must be a new note so the input fields will be empty
             location: travelNote.location,
-            startDate: travelNote.startDate,
-            endDate: travelNote.endDate,
+            startDate: startDate,
+            endDate: endDate,
             planeTicketPrice: travelNote.planeTicketPrice,
             costOnFood: travelNote.costOnFood,
             costOnHotel: travelNote.costOnHotel,
             noteDetails: travelNote.noteDetails,
             overallExperience: travelNote.overallExperience
           })
-          .then(() => history.push("/travelNotes"))
+          .then(() => history.push("/travelNotes")) //then push it to the travel notes list
         }
       }
    }
@@ -132,10 +137,10 @@ export const TravelNoteForm = () => {
     and locations state on initialization.
     */
    useEffect(() => {
-    if (travelNoteId) {
-      getTravelNoteById(travelNoteId)
-      .then(travelNote => {
-        setTravelNote(travelNote)
+    if (travelNoteId) { //if we have this travel note id in the URL(api)
+      getTravelNoteById(travelNoteId) //get that id(we're passing the id)
+      .then(travelNote => { //get the object
+        setTravelNote(travelNote) //set the travel note state with the new object
         setIsLoading(false)
       })
     } else {

@@ -4,15 +4,18 @@ import { TravelNoteContext } from "./TravelNoteProvider"
 import { useHistory } from "react-router-dom"
 
 export const TravelNoteCard = ({ aTravelNote }) => {
+    //we're getting the function that performs a fetch operation with the DELETE method
+    //to delete the specific travel note
     const { deleteTravelNote } = useContext(TravelNoteContext)
     
     
-    const history = useHistory()
+    const history = useHistory() //we need the user history
 
+    //
     const handleDelete = () => {
-        deleteTravelNote(aTravelNote.id)
-        .then(() => {
-            history.push("/travelNotes")
+        deleteTravelNote(aTravelNote.id) //delete the specific note
+        .then(() => { //then
+            history.push("/travelNotes") //once the delete button is clicked, redirect the user to their note list
         })
     }
 

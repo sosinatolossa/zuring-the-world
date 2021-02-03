@@ -30,6 +30,7 @@ export const TravelNoteProvider = (props) => {
             .then(res => res.json())
     }
 
+    //
     const deleteTravelNote = travelNoteId => { //use Params is travelNoteID
         return fetch(`http://localhost:8088/travelNotes/${travelNoteId}`, {
             method: "DELETE"
