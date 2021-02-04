@@ -79,9 +79,16 @@ fieldset {
 .button--close {
     position: relative;
     bottom: -2rem;
+    color: #9e2525;
 }
 
 .dialog {
     min-width: 15rem;
     min-height: 5rem;
+    border: 1px solid #220101;
+    border-radius: .5rem;
+}
+
+.sign-in {
+    color: #9e2525;
 }
