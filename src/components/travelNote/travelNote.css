@@ -45,23 +45,23 @@
     margin-top: 23px;
     margin-left: 15px;
     margin-right: 23px;
-    border-radius: .3rem;
+    border: 1px solid #E19797;
 }
 .link--logout {
     margin: 10px;
     float: right;
-    border-radius: .3rem;
+    border: 1px solid #E19797;
 }
 
 .deleteBtn {
     float: right;
-    margin-top: 5px;
-    border-radius: .3rem;
+    margin-top: 10px;
+    border: 1px solid #E19797;
 }
 
 .editBtn {
-    margin-top: 5px;
-    border-radius: .3rem;
+    margin-top: 10px;
+    border: 1px solid #E19797;
 }
 
 .travelNoteForm__title {
@@ -70,5 +70,5 @@
 
 .btn-primary {
     margin: 5px;
-    border-radius: .3rem;
+    border: 1px solid white;
 }

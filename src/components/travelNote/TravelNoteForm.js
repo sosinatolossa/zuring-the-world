@@ -40,7 +40,7 @@ export const TravelNoteForm = () => {
       always create a copy, make changes, and then set state.*/
       const newTravelNote = { ...travelNote }
 
-      /* TravelNote is an object with properties.
+      /* travelNote is an object with properties.
       Set the property to the new value
       using object bracket notation. */
       newTravelNote[event.target.id] = event.target.value
