@@ -17,7 +17,7 @@ export const TravelNoteList = () => {
     const currentUser = parseInt(localStorage.getItem("ZuringTheWorld_user"))
     
 
-    //we're reaching out to the world to get travel notes which is out travelNotes api
+    //we're reaching out to the world to get travel notes which is our travelNotes api
     useEffect(() => {
         getTravelNotes()
     }, []) //first time this runs, our array should be empty so it won't be infinite loop and that's what we're doing here

@@ -39,29 +39,38 @@
     padding: 2px;
     margin-top: 10px;
     float: right;
+    border: 1px solid white;
+    border-radius: .3rem;
 }
 
 .addNewTravelNoteBtn {
     margin-top: 23px;
     margin-left: 15px;
     margin-right: 23px;
-    border: 1px solid #E19797;
+    border: 1px solid #220101;
+    border-radius: .3rem;
+    color: #9e2525;
 }
 .link--logout {
     margin: 10px;
     float: right;
-    border: 1px solid #E19797;
+    border: 1px solid #220101;
+    border-radius: .3rem;
 }
 
 .deleteBtn {
     float: right;
     margin-top: 10px;
-    border: 1px solid #E19797;
+    border: 1px solid #220101;
+    border-radius: .3rem;
+    color: #9e2525;
 }
 
 .editBtn {
     margin-top: 10px;
-    border: 1px solid #E19797;
+    border: 1px solid #220101;
+    border-radius: .3rem;
+    color: #9e2525;
 }
 
 .travelNoteForm__title {
@@ -71,4 +80,11 @@
 .btn-primary {
     margin: 5px;
     border: 1px solid white;
+    border-radius: .3rem;
+    color: #9e2525;
+}
+
+a {
+    text-decoration: none;
+    color: #9e2525;
 }
