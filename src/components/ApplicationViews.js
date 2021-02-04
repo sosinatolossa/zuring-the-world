@@ -6,6 +6,9 @@ import { TravelNoteProvider } from "./travelNote/TravelNoteProvider"
 import { TravelNoteList } from "./travelNote/TravelNoteList"
 import { TravelNoteForm } from "./travelNote/TravelNoteForm"
 
+import { FutureTripProvider } from "./futureTrip/FutureTripProvider"
+import { FutureTripList } from "./futureTrip/FutureTripList"
+
 
 export const ApplicationViews = () => {
     return (
@@ -26,6 +29,12 @@ export const ApplicationViews = () => {
                 <TravelNoteForm />
             </Route>
         </TravelNoteProvider>
+
+        <FutureTripProvider>
+            <Route path="/futureTrips">
+                <FutureTripList />
+            </Route>
+        </FutureTripProvider>
         </>
     )
 }

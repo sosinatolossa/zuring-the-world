@@ -9,13 +9,13 @@ export const FutureTripProvider = (props) => {
     const [trips, setTrips] = useState([])
 
     const getTrips = () => { // creating a function that
-        return fetch("http://localhost:8088/futureTravelDestinations?_expand=users&_expand=travelNotes") //fetches our Trips api
+        return fetch("http://localhost:8088/futureTrips?_expand=users&_expand=travelNotes") //fetches our Trips api
         .then(res => res.json()) //changes the data into json file
         .then(setTrips) //updates our state
     }
 
     const addTrip = tripObj => {
-        return fetch("http://localhost:8088/futureTravelDestinations", { //fetches our Trips api
+        return fetch("http://localhost:8088/futureTrips", { //fetches our Trips api
             method: "POST", //creates a method post
             headers: {
                 "Content-Type": "application/json"

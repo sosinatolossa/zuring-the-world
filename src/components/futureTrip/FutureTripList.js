@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
-import { FutureTripContext } from "./FutureTravelDestinationProvider"
-import { TravelNoteCard } from "./TravelNoteCard"
-import "./TravelNote.css"
+import { FutureTripContext } from "./FutureTripProvider"
+import { TravelNoteCard } from "./travelNote/TravelNoteCard.js"
+import "./travelNote/TravelNote.css"
 
 export const FutureTripList = () => {
   // This state changes when `getTravelNotes()` is invoked below
