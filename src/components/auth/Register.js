@@ -5,6 +5,7 @@ import "./Login.css"
 export const Register = (props) => {
     const firstName = useRef()
     const lastName = useRef()
+    const gender = useRef()
     const email = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
@@ -28,6 +29,7 @@ export const Register = (props) => {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
+                            gender: gender.current.value,
                             email: email.current.value,
                             name: `${firstName.current.value} ${lastName.current.value}`
                         })
@@ -48,7 +50,7 @@ export const Register = (props) => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <section style={{ textAlign: "center" }}>
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
@@ -68,7 +70,7 @@ export const Register = (props) => {
                     </fieldset>
                     <fieldset>
                         <label htmlFor="gender"> Gender </label>
-                        <select name="gender" id="gender">
+                        <select ref={gender} name="gender" id="gender">
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option>
@@ -83,7 +85,7 @@ export const Register = (props) => {
                     </fieldset>
                 </form>
             </section>
-        </main>
+        </section>
     )
 }
 

@@ -6,4 +6,5 @@
 
 .getStartedPage {
     display: flex;
+    flex-wrap: wrap;
 }
