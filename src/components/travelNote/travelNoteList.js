@@ -22,10 +22,10 @@ export const TravelNoteList = () => {
         getTravelNotes()
     }, []) //first time this runs, our array should be empty so it won't be infinite loop and that's what we're doing here
 
-    return (
+    return ( //Link is a component
         <div>
             <button className="link--logout">
-                    <Link to="/">Log out</Link>
+                    <Link to="/">Log out</Link> 
             </button>
 
             <h1>Zurīng the World</h1>
@@ -42,7 +42,7 @@ export const TravelNoteList = () => {
                     // we will use .map method to iterate our travelNotes array and generate HTML for each object
                     // for that we'll invoke our HTML converter TravelNoteCard component
                     travelNotes.filter( aTravelNote => aTravelNote.usersId === currentUser).map(aTravelNote => {
-                        return <TravelNoteCard key={aTravelNote.id} 
+                        return <TravelNoteCard key={aTravelNote.id}  //key and aTravelNote are named arguments and we're passing them to TravelNoteCard function
                                             aTravelNote={aTravelNote} />
                     })
                 }

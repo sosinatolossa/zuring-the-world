@@ -13,13 +13,15 @@ export const TravelNoteForm = () => {
     Define the initial state of the form inputs with useState()
     */
 
+   const currentUser = parseInt(localStorage.getItem("ZuringTheWorld_user"))
+
     //for edit, hold on to state of travelNote in this view
     const [travelNote, setTravelNote] = useState({
       location: "",
       startDate: "",
       endDate: "",
       planeTicketPrice: 0,
-      costOnFood: 0,
+      costOfFood: 0,
       costOnHotel: 0,
       noteDetails: "",
       overallExperience: 0
@@ -60,11 +62,12 @@ export const TravelNoteForm = () => {
       const startDate = startMonth + "-" + startDay + "-" + startYear
       const endDate = endMonth + "-" + endDay + "-" + endYear
       const planeTicketPrice = parseInt(travelNote.planeTicketPrice)
-      const costOnFood = parseInt(travelNote.costOnFood)
+      const costOfFood = parseInt(travelNote.costOfFood)
       const costOnHotel = parseInt(travelNote.costOnHotel)
       const noteDetails = travelNote.noteDetails
       const overallExperience = parseInt(travelNote.overallExperience)
-      debugger
+      
+      
       if (location === "") {
         window.alert("Please type in name of city you visited")
       }
@@ -82,7 +85,7 @@ export const TravelNoteForm = () => {
         window.alert("Please type in plane ticket price")
       }
 
-      else if (costOnFood === 0 || costOnFood === NaN) {
+      else if (costOfFood === 0 || costOfFood === NaN) {
         window.alert("Please type in total cost on food")
       }
  
@@ -109,10 +112,11 @@ export const TravelNoteForm = () => {
               startDate: startDate,
               endDate: endDate,
               planeTicketPrice: travelNote.planeTicketPrice,
-              costOnFood: travelNote.costOnFood,
+              costOfFood: travelNote.costOfFood,
               costOnHotel: travelNote.costOnHotel,
               noteDetails: travelNote.noteDetails,
-              overallExperience: travelNote.overallExperience
+              overallExperience: travelNote.overallExperience,
+              usersId: currentUser
           })
           .then(() => history.push(`/travelNotes`)) //then push it to the travel notes list
         } else {
@@ -122,10 +126,11 @@ export const TravelNoteForm = () => {
             startDate: startDate,
             endDate: endDate,
             planeTicketPrice: travelNote.planeTicketPrice,
-            costOnFood: travelNote.costOnFood,
+            costOfFood: travelNote.costOfFood,
             costOnHotel: travelNote.costOnHotel,
             noteDetails: travelNote.noteDetails,
-            overallExperience: travelNote.overallExperience
+            overallExperience: travelNote.overallExperience,
+            usersId: currentUser
           })
           .then(() => history.push("/travelNotes")) //then push it to the travel notes list
         }
@@ -184,8 +189,8 @@ export const TravelNoteForm = () => {
 
           <fieldset>
               <div className="form-group">
-                  <label htmlFor="costOnFood">Total cost on food: </label>
-                  <input type="text" id="costOnFood" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost on food" value={travelNote.costOnFood}/>
+                  <label htmlFor="costOfFood">Total cost of food: </label>
+                  <input type="text" id="costOfFood" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost of food" value={travelNote.costOfFood}/>
               </div>
           </fieldset>
 
@@ -207,11 +212,11 @@ export const TravelNoteForm = () => {
               <div className="form-group">
                   <label htmlFor="overallExperience">Overall experience: </label>
                   <select defaultValue={travelNote.overallExperience} name="overallExperience" id="overallExperience" onChange={handleControlledInputChange} className="form-control" >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
+                      <option selected = {travelNote.overallExperience === 1 ? "selected" : ""} value="1">1</option>
+                      <option selected = {travelNote.overallExperience === 2 ? "selected" : ""} value="2">2</option>
+                      <option selected = {travelNote.overallExperience === 3 ? "selected" : ""} value="3">3</option>
+                      <option selected = {travelNote.overallExperience === 4 ? "selected" : ""} value="4">4</option>
+                      <option selected = {travelNote.overallExperience === 5 ? "selected" : ""} value="5">5</option>
                   </select>
               </div>
           </fieldset>

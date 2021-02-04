@@ -1,4 +1,4 @@
-.h1, h1 {
+h1 {
     font-size: 2.5rem;
     font-style: italic;
     background-color: rgb(247, 239, 239);
@@ -65,15 +65,14 @@ fieldset {
     /* background-position-x: right; */
     /* background-image: url(logo.png); */
     z-index: 1;
-    min-width: 35rem;
     background-color: #E19797;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     padding: 10px;
     border: 2px solid #ced4da;
     border-radius: .25rem;
-    flex-wrap: wrap;
     margin: 50px;
+    
 }
 
 .button--close {

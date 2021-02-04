@@ -29,7 +29,7 @@ export const Login = props => {
     }
 
     return (
-        <main className="container--login">
+        <section className="container--login">
             <dialog className="dialog dialog--auth" ref={existDialog}>
                 <div>User does not exist</div>
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
@@ -53,6 +53,6 @@ export const Login = props => {
                     </fieldset>
                 </form>
             </section>
-        </main>
+        </section>
     )
 }
