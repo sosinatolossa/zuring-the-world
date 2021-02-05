@@ -7,7 +7,6 @@ export const NoteSearch = () => {
   return (
     <>
       <section className="search">
-        <h3>Type your next travel destination</h3>
         <input type="text"
             className="input--wide"
             onKeyUp={(event) => setSearchTerms(event.target.value)}
