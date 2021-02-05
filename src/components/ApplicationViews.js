@@ -18,24 +18,21 @@ export const ApplicationViews = () => {
         <Route exact path="/">
                 <GetStartedPage />
             </Route>
-        <TravelNoteProvider>
-            <Route exact path="/travelNotes">
-                <TravelNoteList />
-            </Route>
-            <Route exact path="/travelNotes/create">
-                <TravelNoteForm />
-            </Route>
-            {/* hhb */}
-            <Route path="/travelNotes/edit/:travelNoteId(\d+)">
-                <TravelNoteForm />
-            </Route>
-        </TravelNoteProvider>
-
         <FutureTripProvider>
-            <Route path="/travelNotes">
-                <NoteSearch />
-                <FutureTripList />
-            </Route>
+            <TravelNoteProvider>
+                <Route exact path="/travelNotes">
+                    <TravelNoteList />
+                    <NoteSearch />
+                    <FutureTripList />
+                </Route>
+                <Route exact path="/travelNotes/create">
+                    <TravelNoteForm />
+                </Route>
+                {/* hhb */}
+                <Route path="/travelNotes/edit/:travelNoteId(\d+)">
+                    <TravelNoteForm />
+                </Route>
+            </TravelNoteProvider>
         </FutureTripProvider>
         </>
     )

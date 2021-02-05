@@ -23,7 +23,7 @@ export const TravelNoteList = () => {
     }, []) //first time this runs, our array should be empty so it won't be infinite loop and that's what we're doing here
 
     return ( //Link is a component
-        <div>
+        <div className="noteSection">
             <button className="link--logout">
                     <Link to="/">Log out</Link> 
             </button>

@@ -5,9 +5,11 @@ import { ApplicationViews } from "./ApplicationViews";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import "./zuring-the-world.css"
+import { PropsAndState } from "./PropsAndState"
 
 export const ZuringTheWorld = () => (
     <>
+        {/* <PropsAndState yourName="Brenda" /> */}
         <Route 
             render={() => {
                 if (localStorage.getItem("ZuringTheWorld_user")) {
