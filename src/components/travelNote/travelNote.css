@@ -16,6 +16,26 @@
     border-radius: .5rem;
   }
 
+.trips {
+    background-color: #E19797;
+    margin: 15px;
+    border-radius: .5rem;
+}
+
+.search {
+    padding: 1em;
+    
+}
+
+.travelNote {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: .5rem;
+}
+
 .aTravelNote__details {
     background-color: #E19797;
     color: red;
