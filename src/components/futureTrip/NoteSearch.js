@@ -6,7 +6,7 @@ export const NoteSearch = () => {
 
   return (
     <>
-      <section className="search">
+      <section className="search searchSection">
         <input type="text"
             className="input--wide"
             onKeyUp={(event) => setSearchTerms(event.target.value)}

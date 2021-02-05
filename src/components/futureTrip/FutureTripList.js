@@ -37,7 +37,7 @@ export const FutureTripList = () => {
 
 
   return (
-    <div className="trips">
+    <div className="trips tripsSection">
       
       { 
         // we're using .filter method so we can filter through the notes that does not belong to the current user
