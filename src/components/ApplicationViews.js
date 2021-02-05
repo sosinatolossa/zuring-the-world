@@ -8,6 +8,7 @@ import { TravelNoteForm } from "./travelNote/TravelNoteForm"
 
 import { FutureTripProvider } from "./futureTrip/FutureTripProvider"
 import { FutureTripList } from "./futureTrip/FutureTripList"
+import { NoteSearch } from "./futureTrip/NoteSearch"
 
 
 export const ApplicationViews = () => {
@@ -32,6 +33,7 @@ export const ApplicationViews = () => {
 
         <FutureTripProvider>
             <Route path="/travelNotes">
+                <NoteSearch />
                 <FutureTripList />
             </Route>
         </FutureTripProvider>
