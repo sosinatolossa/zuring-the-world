@@ -6,11 +6,13 @@ export const NoteSearch = () => {
 
   return (
     <>
-      Note search:
-      <input type="text"
-        className="input--wide"
-        onKeyUp={(event) => setSearchTerms(event.target.value)}
-        placeholder="Search for a city... " />
+      <section className="search">
+        <h3>Type your next travel destination</h3>
+        <input type="text"
+            className="input--wide"
+            onKeyUp={(event) => setSearchTerms(event.target.value)}
+            placeholder="Search for a city... " />
+      </section>
     </>
   )
 }

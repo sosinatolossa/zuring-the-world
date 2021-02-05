@@ -50,7 +50,6 @@ export const TravelNoteForm = () => {
       setTravelNote(newTravelNote)
     }
     useEffect(() => {
-      console.log("travelNote", travelNote)
       }, [travelNote])
 
     const handleClickSaveTravelNote = () => {

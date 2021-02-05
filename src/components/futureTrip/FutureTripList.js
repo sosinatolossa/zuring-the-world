@@ -19,7 +19,6 @@ export const FutureTripList = () => {
 
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("FutureTripList: useEffect - getTrips")
     getTrips()
 
   }, [])
@@ -29,7 +28,7 @@ export const FutureTripList = () => {
   useEffect(() => {
     if (searchTerms !== "") {
       // If the search field is not blank, display matching animals
-      const subset = trips.filter(trip => trip.name.toLowerCase().includes(searchTerms))
+      const subset = trips.filter(trip => trip.travelNotes.location.includes(searchTerms))
       setFiltered(subset)
     } else {
       // If the search field is blank, display all animals
@@ -40,7 +39,7 @@ export const FutureTripList = () => {
 
   return (
     <div className="trips">
-      <h3>Future trips</h3>
+    
       { 
         // we're using .filter method so we can filter through the notes that does not belong to the current user
         // we will use .map method to iterate our travelNotes array and generate HTML for each object
