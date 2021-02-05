@@ -28,7 +28,7 @@ export const TravelNoteList = () => {
                     <Link to="/">Log out</Link> 
             </button>
 
-            <h1>Zurīng the World</h1>
+            <h1 className="project-name">Zurīng the World</h1>
             
             <button className="addNewTravelNoteBtn" onClick={() => {history.push("/travelNotes/create")}}>
                 Add new travel note

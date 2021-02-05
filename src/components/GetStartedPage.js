@@ -8,7 +8,7 @@ import "./auth/Login.css"
 export const GetStartedPage = () => {
     return (
         <>
-        <h1>Zurīng the World</h1>
+        <h1 className="project-name">Zurīng the World</h1>
         <section className="getStartedPage">
             <Route path="/">
                 <Login />

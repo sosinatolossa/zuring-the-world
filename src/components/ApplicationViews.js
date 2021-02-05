@@ -31,7 +31,7 @@ export const ApplicationViews = () => {
         </TravelNoteProvider>
 
         <FutureTripProvider>
-            <Route path="/futureTrips">
+            <Route path="/travelNotes">
                 <FutureTripList />
             </Route>
         </FutureTripProvider>
