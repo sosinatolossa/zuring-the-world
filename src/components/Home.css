@@ -1,0 +1,32 @@
+.homepage {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link--logout {
+    margin: 10px;
+    float: right;
+    border: 1px solid #220101;
+    border-radius: .3rem;
+}
+
+.search {
+    padding: 1em;   
+}
+
+.travelNote {
+    /* display: block; */
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+.trips {
+    flex-wrap: wrap;
+    background-color: #E19797;
+    margin: 5px;
+    border-radius: .5rem;
+}
