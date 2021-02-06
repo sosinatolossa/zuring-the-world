@@ -1,6 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { GetStartedPage } from "./GetStartedPage"
+import { HomePage } from "./Home"
 
 import { TravelNoteProvider } from "./travelNote/TravelNoteProvider"
 import { TravelNoteList } from "./travelNote/TravelNoteList"
@@ -21,9 +22,7 @@ export const ApplicationViews = () => {
         <FutureTripProvider>
             <TravelNoteProvider>
                 <Route exact path="/travelNotes">
-                    <TravelNoteList />
-                    <NoteSearch />
-                    <FutureTripList />
+                    <HomePage />
                 </Route>
                 <Route exact path="/travelNotes/create">
                     <TravelNoteForm />

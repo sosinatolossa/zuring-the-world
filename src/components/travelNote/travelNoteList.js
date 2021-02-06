@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react"
 // we're importing the context object we created in the provider component so that the Context hook can access the objects it exposes
-import { Link } from "react-router-dom";
 import { TravelNoteContext } from "./TravelNoteProvider"
 import { TravelNoteCard } from "./TravelNoteCard"
 import { useHistory } from 'react-router-dom';
@@ -23,12 +22,7 @@ export const TravelNoteList = () => {
     }, []) //first time this runs, our array should be empty so it won't be infinite loop and that's what we're doing here
 
     return ( //Link is a component
-        <div className="noteSection">
-            <button className="link--logout">
-                    <Link to="/">Log out</Link> 
-            </button>
-
-            <h1 className="project-name">Zurīng the World</h1>
+        <div className="homepage">
             
             <button className="addNewTravelNoteBtn" onClick={() => {history.push("/travelNotes/create")}}>
                 Add new travel note

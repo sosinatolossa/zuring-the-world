@@ -1,11 +1,11 @@
 .travelNotes {
     background-color: #E19797;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 15px;
     border-radius: .5rem;
+    flex-wrap: wrap;
 }
+
 
 .aTravelNote {
     flex-basis: 28%;
@@ -14,32 +14,8 @@
     border: 1px solid white;
     background-color: white;
     border-radius: .5rem;
+    flex-wrap: wrap;
   }
-
-.trips {
-    background-color: #E19797;
-    margin: 15px;
-    border-radius: .5rem;
-}
-
-.search {
-    padding: 1em;
-    
-}
-
-.travelNote {
-    flex-basis: 28%;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid white;
-    background-color: white;
-    border-radius: .5rem;
-}
-
-.aTravelNote__details {
-    background-color: #E19797;
-    color: red;
-}
 
 .travelNoteForm {
     background-color: #E19797;
@@ -70,12 +46,6 @@
     border: 1px solid #220101;
     border-radius: .3rem;
     color: #9e2525;
-}
-.link--logout {
-    margin: 10px;
-    float: right;
-    border: 1px solid #220101;
-    border-radius: .3rem;
 }
 
 .deleteBtn {
