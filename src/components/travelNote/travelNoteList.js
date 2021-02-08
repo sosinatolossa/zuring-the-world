@@ -5,7 +5,6 @@ import { TravelNoteCard } from "./TravelNoteCard"
 import { useHistory } from 'react-router-dom';
 import "./TravelNote.css"
 
-
 export const TravelNoteList = () => {
     //This state changes when we invoke getTravelNotes below
     const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
@@ -22,7 +21,7 @@ export const TravelNoteList = () => {
     }, []) //first time this runs, our array should be empty so it won't be infinite loop and that's what we're doing here
 
     return ( //Link is a component
-        <div className="homepage">
+        <div className="travelNotesContainer">
             
             <button className="addNewTravelNoteBtn" onClick={() => {history.push("/travelNotes/create")}}>
                 Add new travel note

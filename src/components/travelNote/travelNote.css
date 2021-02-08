@@ -1,20 +1,27 @@
+.travelNotesContainer {
+    width: 70%
+}
+
 .travelNotes {
+    flex-basis: 28%;
     background-color: #E19797;
     display: flex;
-    margin: 15px;
+    margin: 1rem;
     border-radius: .5rem;
     flex-wrap: wrap;
+    flex-direction: column;
+    height: 60%;
 }
 
 
 .aTravelNote {
-    flex-basis: 28%;
     margin: 1em;
     padding: 1em;
     border: 1px solid white;
     background-color: white;
     border-radius: .5rem;
     flex-wrap: wrap;
+    width: 40%;
   }
 
 .travelNoteForm {
