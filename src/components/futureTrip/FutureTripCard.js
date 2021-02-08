@@ -1,5 +1,5 @@
 import React, {useContext } from "react"
-import "../travelNote/TravelNote.css"
+import "../travelNote/travelNote.css"
 
 export const FutureTripCard = ({ travelNote }) => { //travelNote is an object nested inside props 
     return (

@@ -1,10 +1,10 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { TravelNoteList } from "./travelNote/TravelNoteList"
+import { TravelNoteList } from "./travelNote/travelNoteList"
 import { NoteSearch } from "./futureTrip/NoteSearch"
 import { FutureTripList } from "./futureTrip/FutureTripList"
 import { Link } from "react-router-dom"
-import "./travelNote/TravelNote.css"
+import "./travelNote/travelNote.css"
 import "./Home.css"
 
 export const HomePage = () => {
