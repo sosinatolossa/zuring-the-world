@@ -24,7 +24,7 @@ export const TravelNoteForm = () => {
       costOfFood: 0,
       costOnHotel: 0,
       noteDetails: "",
-      overallExperience: 0
+      overallExperience: ""
     });
     //wait for data before button is active
     const [isLoading, setIsLoading] = useState(true);
@@ -64,7 +64,7 @@ export const TravelNoteForm = () => {
       const costOfFood = parseInt(travelNote.costOfFood)
       const costOnHotel = parseInt(travelNote.costOnHotel)
       const noteDetails = travelNote.noteDetails
-      const overallExperience = parseInt(travelNote.overallExperience)
+      const overallExperience = travelNote.overallExperience
       
       
       if (location === "") {
@@ -96,7 +96,7 @@ export const TravelNoteForm = () => {
         window.alert("Please describe your traveling experiences")
       }
 
-      else if (overallExperience === 0) {
+      else if (overallExperience === "") {
         window.alert("Please rate your overall travel experience")
       }
 
@@ -211,11 +211,11 @@ export const TravelNoteForm = () => {
               <div className="form-group">
                   <label htmlFor="overallExperience">Overall experience: </label>
                   <select defaultValue={travelNote.overallExperience} name="overallExperience" id="overallExperience" onChange={handleControlledInputChange} className="form-control" >
-                      <option selected = {travelNote.overallExperience === 1 ? "selected" : ""} value="1">1</option>
-                      <option selected = {travelNote.overallExperience === 2 ? "selected" : ""} value="2">2</option>
-                      <option selected = {travelNote.overallExperience === 3 ? "selected" : ""} value="3">3</option>
-                      <option selected = {travelNote.overallExperience === 4 ? "selected" : ""} value="4">4</option>
-                      <option selected = {travelNote.overallExperience === 5 ? "selected" : ""} value="5">5</option>
+                      <option selected = {travelNote.overallExperience === "1" ? "selected" : ""} value="😡">1 (Terrible)</option>
+                      <option selected = {travelNote.overallExperience === "2" ? "selected" : ""} value="😟">2 (Bad)</option>
+                      <option selected = {travelNote.overallExperience === "3" ? "selected" : ""} value="😕">3 (Okay)</option>
+                      <option selected = {travelNote.overallExperience === "4" ? "selected" : ""} value="😊">4 (Good)</option>
+                      <option selected = {travelNote.overallExperience === "5" ? "selected" : ""} value="😃">5 (Great)</option>
                   </select>
               </div>
           </fieldset>

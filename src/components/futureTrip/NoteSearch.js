@@ -7,10 +7,14 @@ export const NoteSearch = () => {
   return (
     <>
       <section className="search searchSection">
-        <input type="text"
-            className="input--wide"
-            onKeyUp={(event) => setSearchTerms(event.target.value)}
-            placeholder="Search for a city... " />
+        <div className="results">
+          <h4>Type your next travel destination</h4>
+          <input type="text"
+              className="input--wide"
+              onKeyUp={(event) => setSearchTerms(event.target.value)}
+              placeholder="Search for a city... " />
+        </div>
+        <div className="results-name"><em>Results for </em></div>
       </section>
     </>
   )
