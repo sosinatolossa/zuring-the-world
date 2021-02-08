@@ -3,13 +3,10 @@ import { Route } from "react-router-dom"
 import { GetStartedPage } from "./GetStartedPage"
 import { HomePage } from "./Home"
 
-import { TravelNoteProvider } from "./travelNote/TravelNoteProvider"
-import { TravelNoteList } from "./travelNote/TravelNoteList"
+import { TravelNoteProvider } from "./travelNote/travelNoteProvider"
 import { TravelNoteForm } from "./travelNote/TravelNoteForm"
 
 import { FutureTripProvider } from "./futureTrip/FutureTripProvider"
-import { FutureTripList } from "./futureTrip/FutureTripList"
-import { NoteSearch } from "./futureTrip/NoteSearch"
 
 
 export const ApplicationViews = () => {

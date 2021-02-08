@@ -1,6 +1,6 @@
 import React, {useContext } from "react"
-import "./TravelNote.css"
-import { TravelNoteContext } from "./TravelNoteProvider"
+import "./travelNote.css"
+import { TravelNoteContext } from "./travelNoteProvider"
 import { useHistory } from "react-router-dom"
 
 export const TravelNoteCard = ({ aTravelNote }) => { //aTravelNote is an object nested inside props
