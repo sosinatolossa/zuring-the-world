@@ -31,6 +31,7 @@ export const FutureTripList = () => {
       setFiltered(subset)
     } else {
       // If the search field is blank, display all animals
+      console.log(trips, "trips")
       setFiltered(trips)
     }
   }, [searchTerms, trips])

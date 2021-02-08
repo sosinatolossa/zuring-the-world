@@ -11,8 +11,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     height: 60%;
+    overflow: auto;
 }
-
 
 .aTravelNote {
     margin: 1em;
@@ -22,19 +22,24 @@
     border-radius: .5rem;
     flex-wrap: wrap;
     width: 40%;
+    height: auto;
+    overflow: auto;
   }
 
 .travelNoteForm {
     background-color: #E19797;
     margin: 55px;
     border-radius: .5rem;
-    flex-wrap: wrap;   
+    flex-wrap: wrap; 
+    width: 50%; 
+    height: auto; 
 }
 
 .form-group {
-    margin: 15px;
+    margin-left: 15px;
     border-radius: .3rem;
-    align-items: stretch;
+    /* align-items: stretch; */
+    flex-wrap: wrap;
 }
 
 .link--close {

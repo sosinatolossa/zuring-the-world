@@ -34,23 +34,25 @@
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid white;
-    background-color: white;
+    background-color: #E19797;
     border-radius: .5rem;
+    width: 200%;
 }
 
-.trips {
+.otherPeoplesTrips {
     flex-wrap: wrap;
     background-color: #E19797;
     margin-left: 1rem;
     margin-right: 1rem;
     border-radius: .5rem;
-    height: 57.15%;
+    height: 650px;
+    overflow: auto;
 }
 
 .noteSearch-notes {
     display: flex;
     flex-direction: column;
     width: 40%;
+    overflow: auto;
     /* margin: 15px; */
 }
