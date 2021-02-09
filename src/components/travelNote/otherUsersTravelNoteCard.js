@@ -1,6 +1,5 @@
-import React, {useContext } from "react"
+import React from "react"
 import "./travelNote.css"
-import { TravelNoteContext } from "./travelNoteProvider"
 import { useHistory } from "react-router-dom"
 
 export const OtherUsersTravelNoteCard = ({ aTravelNote }) => { //aTravelNote is an object nested inside props
@@ -9,7 +8,7 @@ export const OtherUsersTravelNoteCard = ({ aTravelNote }) => { //aTravelNote is 
 
     return (
         <section className="aTravelNote">
-            <h2 className="aTravelNote__name">Travelor: {aTravelNote.users.firstName} {aTravelNote.users.lastName}</h2>
+            {/* <h2 className="aTravelNote__name">Travelor: {aTravelNote.users.firstName} {aTravelNote.users.lastName}</h2> */}
             <h3 className="aTravelNote__location">City: { aTravelNote.location }</h3>
             <div className="aTravelNote__date">Date: {new Date(aTravelNote.startDate).toLocaleDateString()} - {new Date(aTravelNote.endDate).toLocaleDateString()}</div>
             <div className="aTravelNote__planeTicketPrice">Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
