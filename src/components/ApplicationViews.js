@@ -7,6 +7,7 @@ import { TravelNoteProvider } from "./travelNote/travelNoteProvider"
 import { TravelNoteForm } from "./travelNote/travelNoteForm"
 
 import { FutureTripProvider } from "./futureTrip/FutureTripProvider"
+import { FutureTripList } from "./futureTrip/FutureTripList"
 
 
 export const ApplicationViews = () => {
@@ -20,11 +21,16 @@ export const ApplicationViews = () => {
             <TravelNoteProvider>
                 <Route exact path="/travelNotes">
                     <HomePage />
+                    <section className="savedFutureTrips">
+                        <FutureTripProvider>
+                            <FutureTripList />
+                        </FutureTripProvider>
+                    </section>
                 </Route>
                 <Route exact path="/travelNotes/create">
                     <TravelNoteForm />
                 </Route>
-                {/* hhb */}
+                
                 <Route path="/travelNotes/edit/:travelNoteId(\d+)">
                     <TravelNoteForm />
                 </Route>

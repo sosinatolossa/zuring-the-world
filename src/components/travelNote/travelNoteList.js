@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 // we're importing the context object we created in the provider component so that the Context hook can access the objects it exposes
 import { TravelNoteContext } from "./travelNoteProvider"
 import { TravelNoteCard } from "./travelNoteCard"
@@ -7,7 +7,10 @@ import "./travelNote.css"
 
 export const TravelNoteList = () => {
     //This state changes when we invoke getTravelNotes below
-    const { travelNotes, getTravelNotes } = useContext(TravelNoteContext)
+    const { travelNotes, getTravelNotes, searchTerms } = useContext(TravelNoteContext)
+
+    // Since you are no longer ALWAYS displaying all of the notes
+    // const [ filteredNotes, setFiltered ] = useState([])
 
     const history = useHistory()
 
@@ -19,6 +22,21 @@ export const TravelNoteList = () => {
     useEffect(() => {
         getTravelNotes()
     }, []) //first time this runs, our array should be empty so it won't be infinite loop and that's what we're doing here
+
+
+    // useEffect dependency array with dependencies - will run if dependency changes (state)
+    // searchTerms will cause a change
+    // useEffect(() => {
+    //     if (searchTerms !== "") {
+    //     // If the search field is not blank, display matching animals
+    //     const subset = travelNotes.filter(note => note.location.includes(searchTerms))
+    //     setFiltered(subset)
+    //     } else {
+    //     // If the search field is blank, display all animals
+    //     console.log(travelNotes, "travelNotes")
+    //     setFiltered(travelNotes)
+    //     }
+    // }, [searchTerms, travelNotes])
 
     return ( //Link is a component
         <div className="travelNotesContainer">
