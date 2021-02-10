@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react"
 // we're importing the context object we created in the provider component so that the Context hook can access the objects it exposes
 import { TravelNoteContext } from "./travelNoteProvider"
 import { OtherUsersTravelNoteCard } from "./otherUsersTravelNoteCard"
-import { useHistory } from 'react-router-dom';
 import "./travelNote.css"
 
 export const OtherUsersTravelNoteList = () => {

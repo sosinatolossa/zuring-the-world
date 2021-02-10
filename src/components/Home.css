@@ -53,3 +53,11 @@
     overflow: auto;
     /* margin: 15px; */
 }
+
+.futureTrips {
+    background-color: #E19797;
+}
+
+.aFutureTrip {
+    background-color: white;
+}

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 import "./travelNote/travelNote.css"
 import "./Home.css"
 
+
 export const HomePage = () => {
     return (
         <>
@@ -23,6 +24,7 @@ export const HomePage = () => {
                         <OtherUsersTravelNoteList />
                     </section>
                 </section>
+                
             </Route>
         </section>
         </>

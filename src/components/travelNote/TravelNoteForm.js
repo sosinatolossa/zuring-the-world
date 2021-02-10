@@ -71,17 +71,17 @@ export const TravelNoteForm = () => {
         window.alert("Please type in name of city you visited")
       }
 
-      else if (startDate === "") {
-        window.alert("Please type in start date")
+      else if (startDate === "" || startDate === NaN) {
+        window.alert("Please select or type in start date")
       }
 
-      else if (endDate === "") {
-        window.alert("Please type in end date")
+      else if (endDate === "" || endDate === NaN) {
+        window.alert("Please select or type in end date")
       }
 
       //plane ticket price is 0 or not a number, alert user with message
       else if (planeTicketPrice === 0 || planeTicketPrice === NaN) {
-        window.alert("Please type in plane ticket price")
+        window.alert("Please type in plane ticket price or total money you've spent on gas")
       }
 
       else if (costOfFood === 0 || costOfFood === NaN) {
@@ -181,7 +181,7 @@ export const TravelNoteForm = () => {
 
           <fieldset>
               <div className="form-group">
-                  <label htmlFor="planeTicketPrice">Plane ticket price: </label>
+                  <label htmlFor="planeTicketPrice">Plane ticket price/Total money spent on gas: </label>
                   <input type="text" id="planeTicketPrice" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Plane ticket price" value={travelNote.planeTicketPrice}/>
               </div>
           </fieldset>
