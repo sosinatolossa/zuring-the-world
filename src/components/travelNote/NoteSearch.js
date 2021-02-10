@@ -16,6 +16,7 @@ export const NoteSearch = () => {
               placeholder="Search for a city... " />
         </div>
         <div className="results-name"><em>Results for </em></div>
+        <button>Save</button>
       </section>
     </>
   )

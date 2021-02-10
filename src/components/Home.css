@@ -56,8 +56,14 @@
 
 .futureTrips {
     background-color: #E19797;
+    display: flex;
 }
 
-.aFutureTrip {
+.aFutureTripNote {
+    margin: .5em;
+    padding: 1em;
     background-color: white;
+    border-radius: .5rem;
+    flex-wrap: wrap;
+    overflow: auto;
 }
