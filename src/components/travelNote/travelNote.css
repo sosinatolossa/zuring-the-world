@@ -9,8 +9,8 @@
     margin: 1rem;
     border-radius: .5rem;
     flex-wrap: wrap;
-    flex-direction: column;
-    height: 60%;
+    width: 75%;
+    height: 650px;
     overflow: auto;
 }
 
@@ -22,7 +22,7 @@
     border-radius: .5rem;
     flex-wrap: wrap;
     width: 40%;
-    height: auto;
+    /* height: 200px; */
     overflow: auto;
   }
 

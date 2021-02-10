@@ -31,16 +31,13 @@
 }
 
 .travelNote {
-    flex-basis: 28%;
     margin: 1em;
-    padding: 1em;
     background-color: #E19797;
-    border-radius: .5rem;
+    border-radius: .1rem;
     width: 200%;
 }
 
 .otherPeoplesTrips {
-    flex-wrap: wrap;
     background-color: #E19797;
     margin-left: 1rem;
     margin-right: 1rem;
