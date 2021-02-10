@@ -2,6 +2,7 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { TravelNoteList } from "./travelNote/travelNoteList"
 import { OtherUsersTravelNoteList } from "./travelNote/otherUsersTravelNoteList"
+import { NoteSearch } from "./travelNote/NoteSearch"
 import { Link } from "react-router-dom"
 import "./travelNote/travelNote.css"
 import "./Home.css"
@@ -18,6 +19,7 @@ export const HomePage = () => {
                 <section className="homepage">
                     <TravelNoteList />
                     <section className="noteSearch-notes">
+                        <NoteSearch />
                         <OtherUsersTravelNoteList />
                     </section>
                 </section>

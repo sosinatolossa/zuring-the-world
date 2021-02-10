@@ -7,6 +7,7 @@ export const TravelNoteContext = createContext()
 // will use the useState() hook to define a variable that holds the state of the component, and a function that updates it
 export const TravelNoteProvider = (props) => {
     const [travelNotes, setTravelNotes] = useState([])
+    const [searchTerms, setSearchTerms] = useState("")
 
     const getTravelNotes = () => { // creating a function that
         return fetch("http://localhost:8088/travelNotes?_embed=users") //fetches our travelNotes api
@@ -51,7 +52,7 @@ export const TravelNoteProvider = (props) => {
 
     return ( //we will return the functions we created above through TravelNoteContext. The other components(children) can access the array of objects we stored in travelNotes and invoke the functions we created above
         <TravelNoteContext.Provider value={{
-            travelNotes, getTravelNotes, addTravelNote, getTravelNoteById, deleteTravelNote, updateTravelNote
+            travelNotes, getTravelNotes, addTravelNote, getTravelNoteById, deleteTravelNote, updateTravelNote, searchTerms, setSearchTerms
         }}>
             {props.children}
         </TravelNoteContext.Provider>
