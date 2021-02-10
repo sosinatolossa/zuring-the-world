@@ -1,8 +1,9 @@
 import React, { useContext } from "react"
-import { FutureTripContext } from "./FutureTripProvider"
+import { TravelNoteContext } from "./travelNoteProvider"
+import "./travelNote.css"
 
 export const NoteSearch = () => {
-  const { setSearchTerms } = useContext(FutureTripContext)
+  const { setSearchTerms } = useContext(TravelNoteContext)
 
   return (
     <>
