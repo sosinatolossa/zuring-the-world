@@ -14,8 +14,8 @@ export const FutureTripList = () => {
   return (
       <div className="futureTrips">
           {
-              trips.map(travelNote => {
-                  return <FutureTripCard key={travelNote.id} travelNote={travelNote} />
+              trips.map(aFutureTripNote => {
+                  return <FutureTripCard key={aFutureTripNote.id} aFutureTripNote={aFutureTripNote} />
               })
           }
       </div>

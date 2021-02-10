@@ -17,7 +17,6 @@
 .aTravelNote {
     margin: 1em;
     padding: 1em;
-    border: 1px solid white;
     background-color: white;
     border-radius: .5rem;
     flex-wrap: wrap;
