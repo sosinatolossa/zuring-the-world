@@ -17,7 +17,7 @@ export const OtherUsersTravelNoteCard = ({ aTravelNote }) => { //aTravelNote is 
     }
     return (
         <section className="aTravelNote">
-            {/* <h2 className="aTravelNote__name">Travelor: {aTravelNote.user.firstName} {aTravelNote.user.lastName}</h2> */}
+            <h2 className="aTravelNote__name">Travelor: {aTravelNote.user.firstName} {aTravelNote.user.lastName}</h2>
             <h3 className="aTravelNote__location">City: { aTravelNote.location }</h3>
             <div className="aTravelNote__date">Date: {new Date(aTravelNote.startDate).toLocaleDateString()} - {new Date(aTravelNote.endDate).toLocaleDateString()}</div>
             <div className="aTravelNote__planeTicketPrice">Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
