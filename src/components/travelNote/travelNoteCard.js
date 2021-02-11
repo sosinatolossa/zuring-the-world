@@ -11,7 +11,7 @@ export const TravelNoteCard = ({ aTravelNote }) => { //aTravelNote is an object 
     
     const history = useHistory() //we need the user history
 
-    //
+    
     const handleDelete = () => {
         deleteTravelNote(aTravelNote.id) //delete the specific note
         .then(() => { //then

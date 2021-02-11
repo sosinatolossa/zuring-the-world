@@ -52,7 +52,7 @@ export const TravelNoteList = () => {
                     // we're using .filter method so we can filter through the notes with the user then
                     // we will use .map method to iterate our travelNotes array and generate HTML for each object
                     // for that we'll invoke our HTML converter TravelNoteCard component
-                    travelNotes.filter( aTravelNote => aTravelNote.usersId === currentUser).map(aTravelNote => {
+                    travelNotes.filter( aTravelNote => aTravelNote.userId === currentUser).map(aTravelNote => {
                         return <TravelNoteCard key={aTravelNote.id}  //key and aTravelNote are named arguments and we're passing them to TravelNoteCard function
                                             aTravelNote={aTravelNote} />
                     })

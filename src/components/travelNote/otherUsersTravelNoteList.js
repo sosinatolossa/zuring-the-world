@@ -29,15 +29,16 @@ export const OtherUsersTravelNoteList = () => {
         setFiltered(subset)
         } else {
         // If the search field is blank, display all animals
-        console.log(travelNotes, "travelNotes")
         setFiltered(travelNotes)
         }
     }, [searchTerms, travelNotes])
 
+    
+
     // we're using .filter method so we can filter through the notes based on the current user
-    const currentUsersNotes = travelNotes.filter( aTravelNote => aTravelNote.usersId === currentUser )
+    const currentUsersNotes = travelNotes.filter( aTravelNote => aTravelNote.userId === currentUser )
     // and here, we're using .filter method so we can filter through the notes that don't belong to the current user
-    const notesOfOtherUsers = filteredNotes.filter( aTravelNote => aTravelNote.usersId !== currentUser )
+    const notesOfOtherUsers = filteredNotes.filter( aTravelNote => aTravelNote.userId !== currentUser )
 
     // we will start with notesOfOtherUsers array and want a subset of object using .filter()?
     const differentTripNotes = notesOfOtherUsers.filter(differentUserNoteObj => {

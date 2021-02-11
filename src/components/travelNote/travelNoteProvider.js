@@ -10,7 +10,7 @@ export const TravelNoteProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
 
     const getTravelNotes = () => { // creating a function that
-        return fetch("http://localhost:8088/travelNotes?_embed=users") //fetches our travelNotes api
+        return fetch("http://localhost:8088/travelNotes?_expand=user") //fetches our travelNotes api
         .then(res => res.json()) //changes the data into json file
         .then(setTravelNotes) //updates our state
     }
@@ -23,7 +23,7 @@ export const TravelNoteProvider = (props) => {
             },
             body: JSON.stringify(travelNoteObj) //puts our objects in strings
         })
-        .then(response => response.json)
+        .then(response => response.json())
 
     }
     const getTravelNoteById = (id) => {
@@ -31,7 +31,7 @@ export const TravelNoteProvider = (props) => {
             .then(res => res.json())
     }
 
-    //
+
     const deleteTravelNote = travelNoteId => { //use Params is travelNoteID
         return fetch(`http://localhost:8088/travelNotes/${travelNoteId}`, {
             method: "DELETE"
