@@ -24,7 +24,6 @@ export const FutureTripProvider = (props) => {
             body: JSON.stringify(tripObj) //puts our objects in strings
         })
         .then(getFutureTrips)
-
     }
 
     const deleteFutureTrip = futureTripId => { //use Params is travelNoteID
