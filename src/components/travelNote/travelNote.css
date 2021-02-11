@@ -12,6 +12,7 @@
     width: 75%;
     height: 650px;
     overflow: auto;
+    /* box-shadow: 5px 2px gray; */
 }
 
 .aTravelNote {
