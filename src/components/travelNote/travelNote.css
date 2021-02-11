@@ -85,6 +85,13 @@
     color: #9e2525;
 }
 
+.saveBtn {
+    margin-top: 10px;
+    border: 1px solid #220101;
+    border-radius: .3rem;
+    color: #9e2525;
+}
+
 a {
     text-decoration: none;
     color: #9e2525;
