@@ -10,7 +10,7 @@ export const TravelNoteProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
 
     const getTravelNotes = () => { // creating a function that
-        return fetch("http://localhost:8088/travelNotes?_expand=user") //fetches our travelNotes api
+        return fetch("http://localhost:8088/travelNotes") //fetches our travelNotes api
         .then(res => res.json()) //changes the data into json file
         .then(setTravelNotes) //updates our state
     }
