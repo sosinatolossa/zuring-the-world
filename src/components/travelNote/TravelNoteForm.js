@@ -15,6 +15,7 @@ export const TravelNoteForm = () => {
 
    const currentUser = parseInt(localStorage.getItem("ZuringTheWorld_user"))
 
+   const [imageURL, setImageURL] = useState("")
     //for edit, hold on to state of travelNote in this view
     const [travelNote, setTravelNote] = useState({
       location: "",
@@ -24,7 +25,8 @@ export const TravelNoteForm = () => {
       costOfFood: 0,
       costOnHotel: 0,
       noteDetails: "",
-      overallExperience: ""
+      overallExperience: "",
+      imageURL: ""
     });
     //wait for data before button is active
     const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +35,25 @@ export const TravelNoteForm = () => {
     const {travelNoteId} = useParams();
 	        const history = useHistory();
 
+    //image upload handling
+    const [loading, setLoading] = useState(false)
+    const uploadImage = async e => {
+        const files = e.target.files
+        const data = new FormData()
+        data.append("file", files[0])
+        data.append("upload_preset", "ZuringTheWorld")
+        setLoading(true)
+        const response = await fetch(
+            "https://api.cloudinary.com/v1_1/sosina/image/upload",
+            {
+                method: "POST",
+                body: data
+            }
+        )
+        const file = await response.json()
+        setImageURL(file.secure_url)
+        setLoading(false)
+    }
 
 
     //when a field changes, update state. The return will re-render and display based on the values in state
@@ -115,10 +136,11 @@ export const TravelNoteForm = () => {
               costOnHotel: travelNote.costOnHotel,
               noteDetails: travelNote.noteDetails,
               overallExperience: travelNote.overallExperience,
-              userId: currentUser
+              userId: currentUser,
+              imageURL: imageURL
           })
           .then(() => history.push(`/travelNotes`)) //then push it to the travel notes list
-        } else {
+        } else { 
           //POST - add
           addTravelNote({ //if not, this must be a new note so the input fields will be empty
             location: travelNote.location,
@@ -129,7 +151,8 @@ export const TravelNoteForm = () => {
             costOnHotel: travelNote.costOnHotel,
             noteDetails: travelNote.noteDetails,
             overallExperience: travelNote.overallExperience,
-            userId: currentUser
+            userId: currentUser,
+            imageURL: imageURL
           })
           .then(() => history.push("/travelNotes")) //then push it to the travel notes list
         }
@@ -156,77 +179,90 @@ export const TravelNoteForm = () => {
   
 
     return (
-      <form className="travelNoteForm">
-          <button className="link--close">
-                <Link to="/travelNotes">close</Link>
-          </button>
-          <h2 className="travelNoteForm__title">{travelNoteId ? "Edit travel note" : "Add new travel note"}</h2>
-          <fieldset>
-              <div className="form-group">
-                  <label htmlFor="location">City: </label>
-                  <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="City visited" value={travelNote.location}/>
-              </div>
-          </fieldset>
+      <>
+        <form className="travelNoteForm">
+            <button className="link--close">
+                  <Link to="/travelNotes">close</Link>
+            </button>
+            <h2 className="travelNoteForm__title">{travelNoteId ? "Edit travel note" : "Add new travel note"}</h2>
 
-          <fieldset>
-              <div className="form-group">
-                  <label htmlFor="startDate">From: </label>
-                  <input type="date" id="startDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start date" value={travelNote.startDate}/>
-              </div>
-              <div className="form-group">
-                  <label htmlFor="endDate">To: </label>
-                  <input type="date" id="endDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="End date" value={travelNote.endDate}/>
-              </div>
-          </fieldset>
+            <div className="image">
+                  <div>Upload Image</div>
+                  <input type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
+                  {loading ? (
+                      <h3>Loading...</h3>
+                  ) : (
+                          <img src={imageURL} style={{ width: "100px" }} />
+                      )}
+            </div>
 
-          <fieldset>
-              <div className="form-group">
-                  <label htmlFor="planeTicketPrice">Plane ticket price/Total money spent on gas: </label>
-                  <input type="text" id="planeTicketPrice" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Plane ticket price" value={travelNote.planeTicketPrice}/>
-              </div>
-          </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="location">City: </label>
+                    <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="City visited" value={travelNote.location}/>
+                </div>
+            </fieldset>
 
-          <fieldset>
-              <div className="form-group">
-                  <label htmlFor="costOfFood">Total cost of food: </label>
-                  <input type="text" id="costOfFood" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost of food" value={travelNote.costOfFood}/>
-              </div>
-          </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="startDate">From: </label>
+                    <input type="date" id="startDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start date" value={travelNote.startDate}/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="endDate">To: </label>
+                    <input type="date" id="endDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="End date" value={travelNote.endDate}/>
+                </div>
+            </fieldset>
 
-          <fieldset>
-              <div className="form-group">
-                  <label htmlFor="costOnHotel">Total money spent on hotel: </label>
-                  <input type="text" id="costOnHotel" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost on hotel" value={travelNote.costOnHotel}/>
-              </div>
-          </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="planeTicketPrice">Plane ticket price/Total money spent on gas: </label>
+                    <input type="text" id="planeTicketPrice" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Plane ticket price" value={travelNote.planeTicketPrice}/>
+                </div>
+            </fieldset>
 
-          <fieldset>
-              <div className="form-group">
-                  <label htmlFor="noteDetails">Travel details: </label>
-                  <input type="text" id="noteDetails" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Travel details" value={travelNote.noteDetails}/>
-              </div>
-          </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="costOfFood">Total cost of food: </label>
+                    <input type="text" id="costOfFood" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost of food" value={travelNote.costOfFood}/>
+                </div>
+            </fieldset>
 
-          <fieldset>
-              <div className="form-group">
-                  <label htmlFor="overallExperience">Overall experience: </label>
-                  <select defaultValue={travelNote.overallExperience} name="overallExperience" id="overallExperience" onChange={handleControlledInputChange} className="form-control" >
-                      <option selected = {travelNote.overallExperience === "1" ? "selected" : ""} value="😡">1 (Terrible)</option>
-                      <option selected = {travelNote.overallExperience === "2" ? "selected" : ""} value="😟">2 (Bad)</option>
-                      <option selected = {travelNote.overallExperience === "3" ? "selected" : ""} value="😕">3 (Okay)</option>
-                      <option selected = {travelNote.overallExperience === "4" ? "selected" : ""} value="😊">4 (Good)</option>
-                      <option selected = {travelNote.overallExperience === "5" ? "selected" : ""} value="😃">5 (Great)</option>
-                  </select>
-              </div>
-          </fieldset>
-          
-          <button className="btn btn-primary"
-            disabled={isLoading}
-            onClick={event => {
-              event.preventDefault()
-              handleClickSaveTravelNote()
-            }}>
-          {travelNoteId ? "Save note" : "Add note"}</button>
-      </form>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="costOnHotel">Total money spent on hotel: </label>
+                    <input type="text" id="costOnHotel" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Cost on hotel" value={travelNote.costOnHotel}/>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="noteDetails">Travel details: </label>
+                    <input type="text" id="noteDetails" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Travel details" value={travelNote.noteDetails}/>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="overallExperience">Overall experience: </label>
+                    <select defaultValue={travelNote.overallExperience} name="overallExperience" id="overallExperience" onChange={handleControlledInputChange} className="form-control" >
+                        <option selected = {travelNote.overallExperience === "1" ? "selected" : ""} value="😡">1 (Terrible)</option>
+                        <option selected = {travelNote.overallExperience === "2" ? "selected" : ""} value="😟">2 (Bad)</option>
+                        <option selected = {travelNote.overallExperience === "3" ? "selected" : ""} value="😕">3 (Okay)</option>
+                        <option selected = {travelNote.overallExperience === "4" ? "selected" : ""} value="😊">4 (Good)</option>
+                        <option selected = {travelNote.overallExperience === "5" ? "selected" : ""} value="😃">5 (Great)</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <button className="btn btn-primary"
+              disabled={isLoading}
+              onClick={event => {
+                event.preventDefault()
+                handleClickSaveTravelNote()
+              }}>
+            {travelNoteId ? "Save note" : "Add note"}</button>
+        </form>
+      </>
     )
 }

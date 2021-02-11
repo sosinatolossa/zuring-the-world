@@ -4,7 +4,7 @@ import { GetStartedPage } from "./GetStartedPage"
 import { HomePage } from "./Home"
 
 import { TravelNoteProvider } from "./travelNote/travelNoteProvider"
-import { TravelNoteForm } from "./travelNote/travelNoteForm"
+import { TravelNoteForm } from "./travelNote/TravelNoteForm"
 
 import { FutureTripProvider } from "./futureTrip/FutureTripProvider"
 import { FutureTripList } from "./futureTrip/FutureTripList"
