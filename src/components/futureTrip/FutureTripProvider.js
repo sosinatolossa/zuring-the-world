@@ -27,7 +27,7 @@ export const FutureTripProvider = (props) => {
     }
 
     const deleteFutureTrip = futureTripId => { //use Params is travelNoteID
-        return fetch(`http://localhost:8088/travelNotes/${futureTripId}`, {
+        return fetch(`http://localhost:8088/futureTrips/${futureTripId}`, {
             method: "DELETE"
         })
             .then(getFutureTrips)

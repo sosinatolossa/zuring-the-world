@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React, {useContext, useEffect} from "react"
 import "../travelNote/travelNote.css"
 import { FutureTripContext } from "./FutureTripProvider"
 import { useHistory } from "react-router-dom"
@@ -8,7 +8,7 @@ export const FutureTripCard = ({ aFutureTripNote }) => { //aFutureTripNote is an
     //we're getting the function that performs a fetch operation with the DELETE method
     //to delete the specific travel note
     const { deleteFutureTrip } = useContext(FutureTripContext)
-    console.log(aFutureTripNote, "aFutureTripNote")
+    // console.log(aFutureTripNote, "aFutureTripNote")
     const history = useHistory() //we need the user history
 
     const handleDeleteTrip = () => {
