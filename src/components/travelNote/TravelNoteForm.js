@@ -115,7 +115,7 @@ export const TravelNoteForm = () => {
               costOnHotel: travelNote.costOnHotel,
               noteDetails: travelNote.noteDetails,
               overallExperience: travelNote.overallExperience,
-              usersId: currentUser
+              userId: currentUser
           })
           .then(() => history.push(`/travelNotes`)) //then push it to the travel notes list
         } else {
@@ -129,7 +129,7 @@ export const TravelNoteForm = () => {
             costOnHotel: travelNote.costOnHotel,
             noteDetails: travelNote.noteDetails,
             overallExperience: travelNote.overallExperience,
-            usersId: currentUser
+            userId: currentUser
           })
           .then(() => history.push("/travelNotes")) //then push it to the travel notes list
         }

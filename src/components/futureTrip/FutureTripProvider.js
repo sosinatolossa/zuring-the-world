@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from "react"
+import React, { useState, createContext } from "react"
 
 //we're going to create travel context that other components can use for data
 //it is empty here
@@ -27,9 +27,16 @@ export const FutureTripProvider = (props) => {
 
     }
 
+    const deleteFutureTrip = futureTripId => { //use Params is travelNoteID
+        return fetch(`http://localhost:8088/travelNotes/${futureTripId}`, {
+            method: "DELETE"
+        })
+            .then(getFutureTrips)
+    }
+
     return ( //we will return the functions we created above through TripContext. The other components(children) can access the array of objects we stored in Trips and invoke the functions we created above
         <FutureTripContext.Provider value={{
-            trips, getFutureTrips, addFutureTrip
+            trips, getFutureTrips, addFutureTrip, deleteFutureTrip
         }}>
             {props.children}
         </FutureTripContext.Provider>

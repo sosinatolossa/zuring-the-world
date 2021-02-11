@@ -15,7 +15,6 @@ export const OtherUsersTravelNoteCard = ({ aTravelNote }) => { //aTravelNote is 
         }
         addFutureTrip(futureTripObj)
     }
-    console.log(aTravelNote.user.firstName)
     return (
         <section className="aTravelNote">
             <h2 className="aTravelNote__name">Travelor: {aTravelNote.user.firstName} {aTravelNote.user.lastName}</h2>
