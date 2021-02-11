@@ -21,6 +21,9 @@ export const TravelNoteCard = ({ aTravelNote }) => { //aTravelNote is an object 
 
     return (
         <section className="aTravelNote">
+            <div>
+                <img className="image" src={aTravelNote.imageURL}/>
+            </div>
             <h3 className="aTravelNote__location">City: { aTravelNote.location }</h3>
             <div className="aTravelNote__date">Date: {new Date(aTravelNote.startDate).toLocaleDateString()} - {new Date(aTravelNote.endDate).toLocaleDateString()}</div>
             <div className="aTravelNote__planeTicketPrice">Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
