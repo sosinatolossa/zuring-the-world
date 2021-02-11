@@ -22,9 +22,7 @@ export const ApplicationViews = () => {
                 <Route exact path="/travelNotes">
                     <HomePage />
                     <section className="savedFutureTrips">
-                        <FutureTripProvider>
-                            <FutureTripList />
-                        </FutureTripProvider>
+                        <FutureTripList />
                     </section>
                 </Route>
                 <Route exact path="/travelNotes/create">

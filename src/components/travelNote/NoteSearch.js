@@ -3,7 +3,7 @@ import { TravelNoteContext } from "./travelNoteProvider"
 import "./travelNote.css"
 
 export const NoteSearch = () => {
-  const { setSearchTerms } = useContext(TravelNoteContext)
+  const { setSearchTerms, searchTerms } = useContext(TravelNoteContext)
 
   return (
     <>
@@ -15,8 +15,7 @@ export const NoteSearch = () => {
               onKeyUp={(event) => setSearchTerms(event.target.value)}
               placeholder="Search for a city... " />
         </div>
-        <div className="results-name"><em>Results for </em></div>
-        <button>Save</button>
+        <div className="results-name">Results for <em>{searchTerms}</em></div>
       </section>
     </>
   )
