@@ -24,11 +24,11 @@ export const OtherUsersTravelNoteCard = ({ aTravelNote }) => { //aTravelNote is 
         <section className="aTravelNote">
             <div className="aTravelNote__otherTraveler">
                 <img className="image" src={aTravelNote.imageURL}/>
-                <h2 className="aTravelNote__name">{aTravelNote.user.firstName} {aTravelNote.user.lastName}</h2>
+                <h3 className="aTravelNote__name"><em>{aTravelNote.user.firstName} {aTravelNote.user.lastName}</em></h3>
             </div>
-            <h3 className="aTravelNote__location">City: { aTravelNote.location }</h3>
+            <h4 className="aTravelNote__location">City: { aTravelNote.location }</h4>
             <div className="aTravelNote__date">Date: {new Date(aTravelNote.startDate).toLocaleDateString()} - {new Date(aTravelNote.endDate).toLocaleDateString()}</div>
-            <div className="aTravelNote__planeTicketPrice">Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
+            <div className="aTravelNote__planeTicketPrice">Gas/Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
             <div className="aTravelNote__costOnFood">Total money spent on food: ${ aTravelNote.costOfFood }</div>
             <div className="aTravelNote__costOnHotel">Total money spent on hotel: ${ aTravelNote.costOnHotel }</div>
             <div className="aTravelNote__overallExperience">Overall experience: { aTravelNote.overallExperience }</div>

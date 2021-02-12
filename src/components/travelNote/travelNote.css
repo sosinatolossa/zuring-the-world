@@ -146,6 +146,8 @@ a {
 .aTravelNote__name {
     margin-left: 15px;
     margin-top: 80px;
+    color: #a34444;
+    font-family: "Comfortaa", Arial, sans-serif;
 }
 
 .futureTripsTitle {

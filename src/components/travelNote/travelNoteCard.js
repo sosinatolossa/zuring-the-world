@@ -27,14 +27,20 @@ export const TravelNoteCard = ({ aTravelNote }) => { //aTravelNote is an object 
         })
     }
 
+    let startDate = new Date(aTravelNote.startDate)
+    startDate.setDate(startDate.getDate() + 1)
+    let endDate = new Date(aTravelNote.endDate)
+    endDate.setDate(endDate.getDate() + 1)
+
+
     return (
         <section className="aTravelNote">
             <div>
                 <img className="image" src={aTravelNote.imageURL}/>
             </div>
             <h3 className="aTravelNote__location">City: { aTravelNote.location }</h3>
-            <div className="aTravelNote__date">Date: {new Date(aTravelNote.startDate).toLocaleDateString()} - {new Date(aTravelNote.endDate).toLocaleDateString()}</div>
-            <div className="aTravelNote__planeTicketPrice">Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
+            <div className="aTravelNote__date">Date: {startDate.toLocaleDateString()} - {endDate.toLocaleDateString()}</div>
+            <div className="aTravelNote__planeTicketPrice">Gas/Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
             <div className="aTravelNote__costOnFood">Total money spent on food: ${ aTravelNote.costOfFood }</div>
             <div className="aTravelNote__costOnHotel">Total money spent on hotel: ${ aTravelNote.costOnHotel }</div>
             <div className="aTravelNote__overallExperience">Overall experience: { aTravelNote.overallExperience }</div>
