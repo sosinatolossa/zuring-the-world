@@ -8,14 +8,14 @@ export const NoteSearch = () => {
   return (
     <>
       <section className="search searchSection">
+          <h4>Other travelers notes</h4>
         <div className="results">
-          <h4>Other travel notes</h4>
           <input type="text"
               className="input--wide"
               onKeyUp={(event) => setSearchTerms(event.target.value)}
               placeholder="Search for a city... " />
-        </div>
         <div className="results-name">Results for <em>{searchTerms}</em></div>
+        </div>
       </section>
     </>
   )

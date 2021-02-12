@@ -16,12 +16,15 @@ export const FutureTripList = () => {
 
 
   return (
+    <>
+      <h3 className="futureTripsTitle">Future trips</h3>
       <div className="futureTrips">
-          {
-              trips.filter(aFutureTripNote => aFutureTripNote.userId === currentUser).map(aFutureTripNote => {
-                  return <FutureTripCard key={aFutureTripNote.id} aFutureTripNote={aFutureTripNote} />
-              })
-          }
-      </div>
+            {
+                trips.filter(aFutureTripNote => aFutureTripNote.userId === currentUser).map(aFutureTripNote => {
+                    return <FutureTripCard key={aFutureTripNote.id} aFutureTripNote={aFutureTripNote} />
+                })
+            }
+        </div>
+      </>
   )
 }
