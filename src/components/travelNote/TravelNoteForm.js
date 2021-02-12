@@ -75,8 +75,8 @@ export const TravelNoteForm = () => {
 
     const handleClickSaveTravelNote = () => {
       
-      const [startYear, startMonth, startDay] = travelNote.startDate.split("-"); 
-      const [endYear, endMonth, endDay] = travelNote.endDate.split("-");
+      const [startMonth, startDay, startYear] = travelNote.startDate.split("-"); 
+      const [endMonth, endDay, endYear] = travelNote.endDate.split("-");
       
       const location = travelNote.location
       const startDate = startMonth + "-" + startDay + "-" + startYear
@@ -168,6 +168,7 @@ export const TravelNoteForm = () => {
     if (travelNoteId) { //if we have this travel note id in the URL(api)
       getTravelNoteById(travelNoteId) //get that id(we're passing the id)
       .then(travelNote => { //get the object
+        
         setTravelNote(travelNote) //set the travel note state with the new object
         setIsLoading(false)
       })
@@ -199,18 +200,21 @@ export const TravelNoteForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="location">City: </label>
-                    <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="City visited" value={travelNote.location}/>
+                    <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control" 
+                    placeholder="City visited" value={travelNote.location}/>
                 </div>
             </fieldset>
 
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="startDate">From: </label>
-                    <input type="date" id="startDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Start date" value={travelNote.startDate}/>
+                    <input type="date" id="startDate" onChange={handleControlledInputChange} required autoFocus className="form-control" 
+                    placeholder="Start date" value={travelNote.startDate}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="endDate">To: </label>
-                    <input type="date" id="endDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="End date" value={travelNote.endDate}/>
+                    <input type="date" id="endDate" onChange={handleControlledInputChange} required autoFocus className="form-control" 
+                    placeholder="End date" value={travelNote.endDate}/>
                 </div>
             </fieldset>
 
@@ -248,11 +252,11 @@ export const TravelNoteForm = () => {
                 <div className="form-group">
                     <label htmlFor="overallExperience">Overall experience: </label>
                     <select defaultValue={travelNote.overallExperience} name="overallExperience" id="overallExperience" onChange={handleControlledInputChange} className="form-control" >
-                        <option selected = {travelNote.overallExperience === "1" ? "selected" : ""} value="😡">1 (Terrible)</option>
-                        <option selected = {travelNote.overallExperience === "2" ? "selected" : ""} value="😟">2 (Bad)</option>
-                        <option selected = {travelNote.overallExperience === "3" ? "selected" : ""} value="😕">3 (Okay)</option>
-                        <option selected = {travelNote.overallExperience === "4" ? "selected" : ""} value="😊">4 (Good)</option>
-                        <option selected = {travelNote.overallExperience === "5" ? "selected" : ""} value="😃">5 (Great)</option>
+                        <option selected = {travelNote.overallExperience === "😡" ? "selected" : ""} value="😡">1 (Terrible)</option>
+                        <option selected = {travelNote.overallExperience === "😟" ? "selected" : ""} value="😟">2 (Bad)</option>
+                        <option selected = {travelNote.overallExperience === "😕" ? "selected" : ""} value="😕">3 (Okay)</option>
+                        <option selected = {travelNote.overallExperience === "😊" ? "selected" : ""} value="😊">4 (Good)</option>
+                        <option selected = {travelNote.overallExperience === "😃" ? "selected" : ""} value="😃">5 (Great)</option>
                     </select>
                 </div>
             </fieldset>
