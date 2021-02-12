@@ -22,7 +22,7 @@ export const FutureTripCard = ({ aFutureTripNote }) => { //aFutureTripNote is an
         <section className="aFutureTripNote">
             <h3 className="aFutureTripNote__person">Name: { aFutureTripNote.user.firstName } { aFutureTripNote.user.lastName }</h3>
             <h4 className="aFutureTripNote__location">City: { aFutureTripNote.travelNote.location }</h4>
-            <button className="deleteBtn" onClick={console.log("hello"), handleDeleteTrip}>Delete note</button>
+            <button className="deleteBtn" onClick={handleDeleteTrip}>Delete note</button>
         </section>
     )
 }

@@ -77,7 +77,7 @@ export const TravelNoteForm = () => {
       
       const [startYear, startMonth, startDay] = travelNote.startDate.split("-"); 
       const [endYear, endMonth, endDay] = travelNote.endDate.split("-");
-
+      
       const location = travelNote.location
       const startDate = startMonth + "-" + startDay + "-" + startYear
       const endDate = endMonth + "-" + endDay + "-" + endYear
@@ -186,7 +186,7 @@ export const TravelNoteForm = () => {
             </button>
             <h2 className="travelNoteForm__title">{travelNoteId ? "Edit travel note" : "Add new travel note"}</h2>
 
-            <div className="image">
+            <div className="form-group">
                   <div>Upload Image</div>
                   <input type="file" name="file" placeholder="Upload an image" onChange={uploadImage}/>
                   {loading ? (
@@ -235,10 +235,12 @@ export const TravelNoteForm = () => {
                 </div>
             </fieldset>
 
+            {/* <textarea type="text" id="noteDetails" placeholder="notes"></textarea> */}
+
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="noteDetails">Travel details: </label>
-                    <input type="text" id="noteDetails" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Travel details" value={travelNote.noteDetails}/>
+                    <textarea type="text" id="noteDetails" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Travel details" value={travelNote.noteDetails}/>
                 </div>
             </fieldset>
 
