@@ -60,7 +60,7 @@ export const Register = (props) => {
 
             <section>
                 <form className="form--register" onSubmit={handleRegister}>
-                    <h2 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h2>
+                    <h2 className="h3 mb-3 font-weight-normal">Please Register for Zurīng the World</h2>
                     <fieldset>
                         <label htmlFor="firstName"> First Name </label>
                         <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
