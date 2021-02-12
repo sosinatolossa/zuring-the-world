@@ -6,6 +6,15 @@
     display: flex;
 }
 
+.welcomeUserText {
+    margin-left: 15px;
+    margin-top: 50px;
+    width: 14rem;
+    font-family: "Comfortaa", Arial, sans-serif;
+    font-size: 18px;
+    color: #a34444;
+}
+
 .link--logout {
     margin: 10px;
     float: right;
