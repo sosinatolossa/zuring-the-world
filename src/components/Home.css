@@ -39,20 +39,27 @@
     margin-top: 15px;
 }
 
-.travelNote {
-    margin: 1em;
-    background-color: #E19797;
-    border-radius: .1rem;
-    width: 200%;
-}
-
 .otherPeoplesTrips {
     background-color: #E19797;
-    margin-left: 1rem;
-    margin-right: 1rem;
     border-radius: .5rem;
     height: 650px;
     overflow: auto;
+    width: 90%;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+.travelNote {
+    padding: 1rem;
+    border-radius: .1rem;
+    overflow: auto;
+}
+
+.othersTravelNote {
+    margin: 1.3em;
+    padding: 1em;
+    background-color: white;
+    border-radius: .5rem;
 }
 
 .noteSearch-notes {
@@ -60,17 +67,24 @@
     flex-direction: column;
     width: 40%;
     overflow: auto;
-    /* margin: 15px; */
+}
+
+.otherTravelersNoteTitle {
+    text-align: center;
+    margin-top: 4rem;
+    border: 1px solid #E19797;
 }
 
 .futureTrips {
     background-color: #E19797;
     display: flex;
+    flex-basis: 78%;
     width: 75%;
     margin-left: 150px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: .5rem;
+    overflow: auto;
 }
 
 .aFutureTripNote {
@@ -78,6 +92,4 @@
     padding: 1em;
     background-color: white;
     border-radius: .5rem;
-    flex-wrap: wrap;
-    overflow: auto;
 }

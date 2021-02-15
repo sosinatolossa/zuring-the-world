@@ -8,7 +8,7 @@ export const NoteSearch = () => {
   return (
     <>
       <section className="search searchSection">
-          <h4>Other travelers notes</h4>
+          <h4 className="otherTravelersNoteTitle">Other travelers notes</h4>
         <div className="results">
           <input type="text"
               className="input--wide"
