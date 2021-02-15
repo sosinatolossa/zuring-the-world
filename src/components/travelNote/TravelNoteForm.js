@@ -252,11 +252,11 @@ export const TravelNoteForm = () => {
                 <div className="form-group">
                     <label htmlFor="overallExperience">Overall experience: </label>
                     <select defaultValue={travelNote.overallExperience} name="overallExperience" id="overallExperience" onChange={handleControlledInputChange} className="form-control" >
-                        <option selected = {travelNote.overallExperience === "😡" ? "selected" : ""} value="😡">1 (Terrible)</option>
-                        <option selected = {travelNote.overallExperience === "😟" ? "selected" : ""} value="😟">2 (Bad)</option>
-                        <option selected = {travelNote.overallExperience === "😕" ? "selected" : ""} value="😕">3 (Okay)</option>
-                        <option selected = {travelNote.overallExperience === "😊" ? "selected" : ""} value="😊">4 (Good)</option>
-                        <option selected = {travelNote.overallExperience === "😃" ? "selected" : ""} value="😃">5 (Great)</option>
+                        <option selected = {travelNote.overallExperience === "😡" ? "selected" : ""} value="😡">😡 (Terrible)</option>
+                        <option selected = {travelNote.overallExperience === "😟" ? "selected" : ""} value="😟">😟 (Bad)</option>
+                        <option selected = {travelNote.overallExperience === "😕" ? "selected" : ""} value="😕">😕 (Okay)</option>
+                        <option selected = {travelNote.overallExperience === "😊" ? "selected" : ""} value="😊">😊 (Good)</option>
+                        <option selected = {travelNote.overallExperience === "😃" ? "selected" : ""} value="😃">😃 (Great)</option>
                     </select>
                 </div>
             </fieldset>

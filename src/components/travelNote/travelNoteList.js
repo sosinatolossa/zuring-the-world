@@ -42,7 +42,7 @@ export const TravelNoteList = () => {
         <div className="travelNotesContainer">
             
             <button className="addNewTravelNoteBtn" onClick={() => {history.push("/travelNotes/create")}}>
-                Add new travel note
+                Add a new travel note
             </button>
 
             <section className="travelNotes">
