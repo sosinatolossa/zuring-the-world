@@ -1,6 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel'
 import React from "react"
-import { Route } from "react-router-dom"
 
 export const WelcomePage = () => {
     return (
@@ -9,7 +8,7 @@ export const WelcomePage = () => {
             <Carousel.Item interval={1000}>
                 <img
                 className="d-block w-100"
-                src="images/ethiopia2.jpeg"
+                src="/images/ethiopia2.jpeg"
                 alt="First slide"
                 />
                 <Carousel.Caption>
@@ -20,7 +19,7 @@ export const WelcomePage = () => {
             <Carousel.Item interval={500}>
                 <img
                 className="d-block w-100"
-                src="images/GorgeousSidetownsinItaly__Positano_shutterstock.jpg"
+                src="/images/GorgeousSidetownsinItaly__Positano_shutterstock.jpg"
                 alt="Second slide"
                 />
                 <Carousel.Caption>
@@ -31,7 +30,7 @@ export const WelcomePage = () => {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                src="images/ethiopia3.jpeg"
+                src="/images/ethiopia3.jpeg"
                 alt="Third slide"
                 />
                 <Carousel.Caption>

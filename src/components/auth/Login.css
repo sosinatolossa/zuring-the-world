@@ -84,6 +84,7 @@ fieldset {
     position: relative;
     bottom: -2rem;
     color: #9e2525;
+    margin-bottom: 20px;
 }
 
 .dialog {
@@ -95,4 +96,5 @@ fieldset {
 
 .sign-in {
     color: #9e2525;
+    margin-top: 5px;
 }
