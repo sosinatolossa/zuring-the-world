@@ -7,4 +7,6 @@
 .getStartedPage {
     display: flex;
     flex-wrap: wrap;
+    background-position-x: right;
+    background-image: url(auth/Vejer-De-La-Frontera.jpg);
 }

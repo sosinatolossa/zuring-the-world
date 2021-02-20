@@ -69,10 +69,8 @@ fieldset {
 }
 
 .form--login, .form--register {
-    /* background-position-x: right; */
-    /* background-image: url(logo.png); */
     z-index: 1;
-    background-color: #E19797;
+    background-color: rgba(199, 196, 245, 0.72);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     padding: 10px;

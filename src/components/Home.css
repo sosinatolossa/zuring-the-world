@@ -1,5 +1,7 @@
 .theWholeHomePage {
     height: auto;
+    background-position-x: right;
+    background-image: url(travelNote/Vejer-De-La-Frontera.jpg);
 }
 
 .homepage {
@@ -36,13 +38,17 @@
 }
 
 .results-name {
-    margin-top: 15px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: .5rem;
+    padding: 5px;
+    height: 20px;
 }
 
 .otherPeoplesTrips {
     background-color: #E19797;
     border-radius: .5rem;
-    height: 650px;
+    height: 610px;
     overflow: auto;
     width: 90%;
     margin-left: 2rem;
@@ -73,9 +79,12 @@
     text-align: center;
     margin-top: 4rem;
     border: 1px solid #E19797;
+    background-color: white;
 }
 
 .futureTrips {
+    background-position-x: right;
+    background-image: url(travelNote/Vejer-De-La-Frontera.jpg);
     background-color: #E19797;
     display: flex;
     flex-basis: 78%;
