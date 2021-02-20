@@ -38,13 +38,13 @@ export const TravelNoteCard = ({ aTravelNote }) => { //aTravelNote is an object 
             <div>
                 <img className="image" src={aTravelNote.imageURL}/>
             </div>
-            <h3 className="aTravelNote__location">City: <em>{ aTravelNote.location }</em></h3>
-            <div className="aTravelNote__date"><strong>Date:</strong> {startDate.toLocaleDateString()} - {endDate.toLocaleDateString()}</div>
+            <h5 className="aTravelNote__location">City: <strong><em>{ aTravelNote.location }</em> </strong></h5>
+            <div className="aTravelNote__date">Date: {startDate.toLocaleDateString()} - {endDate.toLocaleDateString()}</div>
             <section className="separate">
-                <div className="aTravelNote__planeTicketPrice"><strong>Gas/Plane Ticket Price:</strong> ${ aTravelNote.planeTicketPrice }</div>
-                <div className="aTravelNote__costOnFood"><strong>Total money spent on food:</strong> ${ aTravelNote.costOfFood }</div>
-                <div className="aTravelNote__costOnHotel"><strong>Total money spent on hotel:</strong> ${ aTravelNote.costOnHotel }</div>
-                <div className="aTravelNote__overallExperience"><strong>Overall experience:</strong> { aTravelNote.overallExperience }</div>
+                <div className="aTravelNote__planeTicketPrice">Gas/Plane Ticket Price: ${ aTravelNote.planeTicketPrice }</div>
+                <div className="aTravelNote__costOnFood">Total money spent on food: ${ aTravelNote.costOfFood }</div>
+                <div className="aTravelNote__costOnHotel">Total money spent on hotel: ${ aTravelNote.costOnHotel }</div>
+                <div className="aTravelNote__overallExperience">Overall experience: { aTravelNote.overallExperience }</div>
                 <button className="travelNotesPopupBtn" onClick={toggleModal}>Travel notes</button>
                     <Modal isOpen={isOpen} onRequestClose={toggleModal} contentLabel="My dialog" className="myModal">
                     <div className="aTravelNote__notesDetails">{ aTravelNote.noteDetails }</div>

@@ -20,8 +20,8 @@ export const FutureTripCard = ({ aFutureTripNote }) => { //aFutureTripNote is an
 
     return (
         <section className="aFutureTripNote">
-            <h3 className="aFutureTripNote__person">Name: { aFutureTripNote.user.firstName } { aFutureTripNote.user.lastName }</h3>
-            <h4 className="aFutureTripNote__location">City: { aFutureTripNote.travelNote.location }</h4>
+            <h6 className="aFutureTripNote__person">Name: { aFutureTripNote.user.firstName } { aFutureTripNote.user.lastName }</h6>
+            <div className="aFutureTripNote__location">City: { aFutureTripNote.travelNote.location }</div>
             <button className="deleteBtn" onClick={handleDeleteTrip}>Delete note</button>
         </section>
     )

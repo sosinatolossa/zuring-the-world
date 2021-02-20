@@ -28,7 +28,7 @@ export const HomePage = () => {
                     <Link to="/">Log out</Link> 
             </button>
             <h1 className="project-name">Zurīng the World</h1>
-            <h1 className="welcomeUserText"><em>Welcome, {currentUser ? currentUser.firstName : "Friend"}</em> 😃</h1>
+            <h1 className="welcomeUserText"> <strong> <em>Welcome, {currentUser ? currentUser.firstName : "Friend"}</em> 😃 </strong> </h1>
             <Route path="/travelNotes">
                 <section className="homepage">
                     <TravelNoteList />
