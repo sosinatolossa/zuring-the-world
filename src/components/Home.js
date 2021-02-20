@@ -36,8 +36,7 @@ export const HomePage = () => {
                         <NoteSearch />
                         <OtherUsersTravelNoteList />
                     </section>
-                </section>
-                
+                </section>         
             </Route>
         </section>
         </>

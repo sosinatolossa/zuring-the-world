@@ -14,7 +14,7 @@ export const NoteSearch = () => {
               className="input--wide"
               onKeyUp={(event) => setSearchTerms(event.target.value)}
               placeholder="Search for a city... " />
-        <div className="results-name">Results for <em>{searchTerms}</em></div>
+        <div className="results-name">Results for <em>{searchTerms}</em> </div>
         </div>
       </section>
     </>

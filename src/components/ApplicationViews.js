@@ -1,5 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
+
+import { WelcomePage } from "./WelcomePage"
 import { GetStartedPage } from "./GetStartedPage"
 import { HomePage } from "./Home"
 
@@ -15,8 +17,8 @@ export const ApplicationViews = () => {
     return (
         <>
         <Route exact path="/">
-                <GetStartedPage />
-            </Route>
+            <GetStartedPage />
+        </Route>
         <UserProvider>
             <FutureTripProvider>
                 <TravelNoteProvider>
@@ -26,10 +28,11 @@ export const ApplicationViews = () => {
                             <FutureTripList />
                         </section>
                     </Route>
+
                     <Route exact path="/travelNotes/create">
                         <TravelNoteForm />
                     </Route>
-                    
+ 
                     <Route path="/travelNotes/edit/:travelNoteId(\d+)">
                         <TravelNoteForm />
                     </Route>
