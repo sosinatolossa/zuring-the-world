@@ -137,7 +137,7 @@ export const TravelNoteForm = () => {
               noteDetails: travelNote.noteDetails,
               overallExperience: travelNote.overallExperience,
               userId: currentUser,
-              imageURL: imageURL
+              imageURL: travelNote.imageURL
           })
           .then(() => history.push(`/travelNotes`)) //then push it to the travel notes list
         } else { 
