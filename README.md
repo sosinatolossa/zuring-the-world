@@ -36,7 +36,7 @@ When a user want to read about other cities, they will just have to look at the 
 
   ### Development Tools
   <img src="./src/components/images/github-logo.png" width="10%"></img>
-  <img src="./src/components/images/dbdiagramio-logo.png" width="7%"></img>
+  <img src="./src/components/images/dbdiagramio-logo.png" width="9%"></img>
   <img src="./src/components/images/figma-logo.png" width="10%"></img> 
   <img src="./src/components/images/git-logo.png" width="10%"></img> 
   <img src="./src/components/images/vscode-logo.png" width="10%"></img>
@@ -75,3 +75,37 @@ When a user want to read about other cities, they will just have to look at the 
   ### Wireframes/ Mockups
   <img src="./src/components/images/wireframe1.png" width="45%"></img> <img src="./src/components/images/wireframe2.png" width="45%"></img>
   <img src="./src/components/images/wireframe3.png" width="35%"></img> <img src="./src/components/images/wireframe4.png" width="35%"></img>
+
+  ## Appendix 2: Set Up Instructions
+
+  You will need to have command line tools installed for your computer to use terminal commands.
+
+  Linux/ Windows users, please visit the [Git page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the instructions for set up
+
+  Mac users follow the instructions below
+
+  Open your terminal and type
+  ```sh
+    git --version
+  ```
+
+  You will now need to configure your git account. In the terminal window, type:
+  ```sh
+    git config -global user.name "Your Name"
+    git config -global user.email "Your Email"
+  ```
+
+  If you do not have Node.js installed on your machine, visit the [Node.js Download Page](https://nodejs.org/en/download/) and  follow the instructions. To ensure that it is installed correctly, in your terminal window, type
+  ```sh
+    echo $PATH
+  ```
+  Ensure that the result has the following in the $PATH
+  ```sh
+    /usr/local/bin
+    or
+    /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  ```
+
+  Now you can follow the [installation instructions](#instructions-for-installing-zuring-the-world) to get Zurīng the World up and running on your machine.
+
+  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
