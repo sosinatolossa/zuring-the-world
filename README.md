@@ -32,13 +32,46 @@ When a user want to read about other cities, they will just have to look at the 
   <img src="./src/components/images/react-logo.png" width="10%"></img> 
   <img src="./src/components/images/css3-logo.png" width="10%"></img>
   <img src="./src/components/images/cloudinary-logo.png" width="10%"></img> 
-  <img src="./src/components/images/react-bootstrap.png" width="10%"></img> 
+  <img src="./src/components/images/react-bootstrap-logo.png" width="10%"></img> 
 
   ### Development Tools
   <img src="./src/components/images/github-logo.png" width="10%"></img>
-  <img src="./src/components/images/dbdiagramio-logo.png" width="10%"></img>
+  <img src="./src/components/images/dbdiagramio-logo.png" width="7%"></img>
   <img src="./src/components/images/figma-logo.png" width="10%"></img> 
   <img src="./src/components/images/git-logo.png" width="10%"></img> 
   <img src="./src/components/images/vscode-logo.png" width="10%"></img>
  
+## Instructions for Installing Simplified Supper
+  To launch the Zurīng the World app, you will need to have access to command line tools, node package manager, JSON Server. If you do not have access to any of these tools, you can find instructions for installing them in the [Appendix.](#appendix-2-set-up-instructions)
 
+  Clone this repo on you personal machine using the following command
+  ```sh
+    git clone git@github.com:sosinatolossa/zuring-the-world.git
+  ```
+
+  Install the NPM dependencies for this project using the following commands
+  ```sh
+    cd zuring-the-world
+    npm install
+  ```
+
+  From your terminal window, type
+  ```sh
+    npm start
+  ```
+
+  Now that the server is up and running, you can open an internet browser and access the application
+  ```sh
+    http://localhost:8080/
+  ```
+
+ ### Congratulations you are now experiencing Zurīng the World!
+
+  ## Appendix 1: Planning Documentation
+
+  ### Entity Relationship Diagram
+  ![Zurīng the World ERD](./src/components/images/Zurīng-the-World-ERD.png)
+
+  ### Wireframes/ Mockups
+  <img src="./src/components/images/wireframe1.png" width="45%"></img> <img src="./src/components/images/wireframe2.png" width="45%"></img>
+  <img src="./src/components/images/wireframe3.png" width="35%"></img> <img src="./src/components/images/wireframe4.png" width="35%"></img>
