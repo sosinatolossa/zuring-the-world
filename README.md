@@ -41,7 +41,7 @@ When a user want to read about other cities, they will just have to look on the 
   <img src="./src/components/images/git-logo.png" width="10%"></img> 
   <img src="./src/components/images/vscode-logo.png" width="10%"></img>
  
-## Instructions for Installing Simplified Supper
+## Instructions for Installing Zurīng the World
   To launch the Zurīng the World app, you will need to have access to command line tools, node package manager, JSON Server. If you do not have access to any of these tools, you can find instructions for installing them in the [Appendix.](#appendix-2-set-up-instructions)
 
   Clone this repo on you personal machine using the following command
