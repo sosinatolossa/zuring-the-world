@@ -55,14 +55,19 @@ When a user want to read about other cities, they will just have to look on the 
     npm install
   ```
 
-  From your terminal window, type
+  From your terminal window, type 
   ```sh
     npm start
   ```
-
-  Now that the server is up and running, you can open an internet browser and access the application
+  From your terminal window, open a new tab and type
   ```sh
-    http://localhost:8080/
+    cd zuring-the-world-api
+    json-server -p 8088 -w database.json
+  ```
+
+  Now that the server is up and running, you should be able to register and login. If not, you can open an internet browser and access the application
+  ```sh
+    http://localhost:3000/
   ```
 
  ### Congratulations you are now experiencing Zurīng the World!
