@@ -1,0 +1,364 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Sosina",
+      "lastName": "Tolossa",
+      "gender": "Female",
+      "email": "sosina@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Saron",
+      "lastName": "Challa",
+      "gender": "Female",
+      "email": "saron@hotmail.com"
+    },
+    {
+      "gender": "male",
+      "email": "joe@yahoo.com",
+      "firstName": "Joe",
+      "lastName": "Shepherd",
+      "id": 6
+    },
+    {
+      "gender": "male",
+      "email": "isaiah@gmail.com",
+      "firstName": "Isaiah",
+      "lastName": "Cunningham",
+      "id": 7
+    },
+    {
+      "gender": "male",
+      "email": "natan@hotmail.com",
+      "firstName": "Natan",
+      "lastName": "Mormora",
+      "id": 8
+    },
+    {
+      "gender": "female",
+      "email": "liala@yahoo.com",
+      "firstName": "Liala",
+      "lastName": "Jones",
+      "id": 9
+    },
+    {
+      "gender": "male",
+      "email": "test@test.com",
+      "firstName": "test1",
+      "lastName": "test2",
+      "id": 10
+    }
+  ],
+  "travelNotes": [
+    {
+      "id": 29,
+      "location": "Dire Dawa, Ethiopia",
+      "startDate": "1997-02-05",
+      "endDate": "2012-03-09",
+      "planeTicketPrice": "1300",
+      "costOfFood": "2000",
+      "costOnHotel": "N/A",
+      "noteDetails": "I've been in this city 15 years of my life. I was born and grew up here.",
+      "overallExperience": "😊",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613963512/ZuringTheWorld/q6ijm1zdrxawqewcsqri.png"
+    },
+    {
+      "id": 30,
+      "location": "Addis Ababa, Ethiopia",
+      "startDate": "2007-10-21",
+      "endDate": "2007-10-28",
+      "planeTicketPrice": "95",
+      "costOfFood": "158",
+      "costOnHotel": "Stayed with family.",
+      "noteDetails": "I visited this city for my aunt's wedding. She lives in Addis Ababa and me, my sister, my mom, my aunt and her whole family drove to Addis and spent a week there. We visited my uncle (my dad's brother) and my cousins and we we went walking in the city. My uncle took us to Sheraton hotel, one of the world's biggest hotel/restaurant.",
+      "overallExperience": "😃",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613964185/ZuringTheWorld/sutwspzgn8uqaq5s01ws.png"
+    },
+    {
+      "id": 28,
+      "location": "Knoxville, TN",
+      "startDate": "2016-06-05",
+      "endDate": "2016-06-05",
+      "planeTicketPrice": "20",
+      "costOfFood": "30",
+      "costOnHotel": "N/A",
+      "noteDetails": "I went on one day hiking trip with my sister, cousin, and sister's boyfriend. We went hiking and it rained the whole time. We dried at the location's bathroom, visited University of Tennessee, ate dinner and drove back to Nashville.",
+      "overallExperience": "😕",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613961659/ZuringTheWorld/afmqdsbhaxmgowov0qqn.png"
+    },
+    {
+      "id": 27,
+      "location": "Gatlinberg, TN",
+      "startDate": "2021-02-05",
+      "endDate": "2021-02-10",
+      "planeTicketPrice": "567",
+      "costOfFood": "780",
+      "costOnHotel": "578",
+      "noteDetails": "Me and my sister went to Gatlinburg for the first time. We went out to eat lunch that day then hang out with friends after. On the next day, we went hiking.",
+      "overallExperience": "😊",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613969845/ZuringTheWorld/gonsyrlclw76lysxhw46.jpg"
+    },
+    {
+      "id": 14,
+      "location": "Dallas, TX",
+      "startDate": "2017-07-13",
+      "endDate": "2017-07-17",
+      "planeTicketPrice": "255",
+      "costOfFood": "177",
+      "costOnHotel": "489",
+      "noteDetails": "Me, my sister and my dad went to Dallas for the first time. There was a family get together at night at my uncle's place so we hangout there and met with family. We went out to eat lunch the next day then hang out with family after. On the next day, we went to a botanical garden and we went to Dallas Museum of Art and met up with my uncle after.",
+      "overallExperience": "😃",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613960708/ZuringTheWorld/mlbdiuatj0wpri6ng7zc.png"
+    },
+    {
+      "id": 13,
+      "location": "Chicago, IL",
+      "startDate": "2018-05-14",
+      "endDate": "2018-05-15",
+      "planeTicketPrice": "20",
+      "costOfFood": "20",
+      "costOnHotel": "20",
+      "noteDetails": "On the first day in Chicago, we toured multiple apartments located in the city. We went out for dinner at Parlor Pizza Bar River North and we ate pizza. I had wine and my cousin, my aunt, and grandma had bear. On the next day, we toured more apartments in the city and bought some furniture.",
+      "overallExperience": "😕",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613969688/ZuringTheWorld/ohzoiectopay38mjyrh2.png"
+    },
+    {
+      "id": 12,
+      "location": "Dallas, TX",
+      "startDate": "2018-06-30",
+      "endDate": "2018-07-07",
+      "planeTicketPrice": "30",
+      "costOfFood": "254",
+      "costOnHotel": "457",
+      "noteDetails": "jhjhgjgjugguguhg",
+      "overallExperience": "😊",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613961767/ZuringTheWorld/xxhkqx67syilewgleqwm.png"
+    },
+    {
+      "id": 2,
+      "location": "Toronto, CA",
+      "startDate": "2019-07-11",
+      "endDate": "2019-07-20",
+      "planeTicketPrice": "357",
+      "costOfFood": "200",
+      "costOnHotel": "180",
+      "noteDetails": "Me and my dad went to go see his (my dad's) family side. I toured downtown Toronto on a city bus. There was a family get together in the afternoon on the 13th. On Sunday, it was my cousin's graduation party so we partied. Then I went to Centre Island with my cousin Bety and we spent most of the day there then came back to downtown Toronto and met up with my friend Yeabsira and we had dinner at a chinese restaurant. We went to 6 flags the next day and pretty much rode all the rides. On our last day in Toronto, we went to see my dad's sister and her mom (my dad's step-mom).",
+      "overallExperience": "😊",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613970041/ZuringTheWorld/jfrpw18h7wjo3ctvyjhx.png"
+    },
+    {
+      "id": 4,
+      "location": "Las Vegas, NV",
+      "startDate": "2020-02-19",
+      "endDate": "2020-02-24",
+      "planeTicketPrice": "180",
+      "costOfFood": "257",
+      "costOnHotel": "376",
+      "noteDetails": "Me, my sister and my dad went to Vegas for the first time. There was a family get together at night at my uncle's place so we hangout there and met with family. We went out to eat lunch the next day then hang out with family after. On the next day, we went to a botanical garden and we went to Dallas Museum of Art and met up with my uncle after.",
+      "overallExperience": "😊",
+      "userId": 2,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613966574/ZuringTheWorld/nisawpxchh9qwkb2kkbb.png"
+    },
+    {
+      "id": 22,
+      "location": "Sarasota, FL",
+      "startDate": "2021-02-12",
+      "endDate": "2021-02-17",
+      "planeTicketPrice": "50",
+      "costOfFood": "60",
+      "costOnHotel": "489",
+      "noteDetails": "Toured to school. Saw my parents.",
+      "overallExperience": "😕",
+      "userId": 6,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613966665/ZuringTheWorld/nu4vzonltslpofrg70cf.png"
+    },
+    {
+      "id": 31,
+      "location": "Hawaii",
+      "startDate": "2016-05-04",
+      "endDate": "2016-05-10",
+      "planeTicketPrice": "850",
+      "costOfFood": "200",
+      "costOnHotel": "1200",
+      "noteDetails": "This was the most expensive trip I’ve been on. Very expensive but would say it is very worth it. I would recommend staying in a resort as food and certain activity passes can be included. That’s what allowed me to save money on food costs during the trip. However the hotel and flight are the most expensive part of the trip. Would recommend planning this trip way in advance..",
+      "overallExperience": "😃",
+      "userId": 7,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613965978/ZuringTheWorld/lbsq3vrxfs8jfhoj5z1s.png"
+    },
+    {
+      "id": 32,
+      "location": "Miami, FL",
+      "startDate": "2017-08-23",
+      "endDate": "2017-08-07",
+      "planeTicketPrice": "97",
+      "costOfFood": "200",
+      "costOnHotel": "150",
+      "noteDetails": " Enjoyed this vacation very much. Would recommend using Groupon and buying plane tickets outside of peak season to get the best deals. The weather was nice and the hotel prices were relatively inexpensive.",
+      "overallExperience": "😊",
+      "userId": 7,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613966166/ZuringTheWorld/rd3dzm7bacal7arys22e.png"
+    },
+    {
+      "id": 33,
+      "location": "Nassau, Bahamas",
+      "startDate": "2018-12-08",
+      "endDate": "2018-12-13",
+      "planeTicketPrice": "434",
+      "costOfFood": "150",
+      "costOnHotel": "350",
+      "noteDetails": "Had a great experience. Would recommend to anyone looking for a tropical vacation. Would recommend traveling in a large group to save on room costs.",
+      "overallExperience": "😃",
+      "userId": 7,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613966418/ZuringTheWorld/h6ay7q2fxkf6xnje3tyd.png"
+    },
+    {
+      "location": "Atlanta, GA",
+      "startDate": "2016-03-06",
+      "endDate": "2021-02-07",
+      "planeTicketPrice": "35",
+      "costOfFood": "89",
+      "costOnHotel": "170",
+      "noteDetails": "i went to Atlanta with my sister, my cousin and friend. We went to Ethiopian restaurant and headed to Gatlinburg to meet up with friends.",
+      "overallExperience": "😕",
+      "userId": 2,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613967420/ZuringTheWorld/vqvmz9kptcpehebrzzjm.png",
+      "id": 34
+    },
+    {
+      "id": 35,
+      "location": "Atlanta, GA",
+      "startDate": "2016-12-31",
+      "endDate": "2017-01-02",
+      "planeTicketPrice": "30",
+      "costOfFood": "189",
+      "costOnHotel": "185",
+      "noteDetails": "We went to multiple Ethiopian restaurants and the aquarium.",
+      "overallExperience": "😃",
+      "userId": 2,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613970369/ZuringTheWorld/wo4igai2kmyy8cugw3u9.jpg"
+    },
+    {
+      "location": "Miami, FL",
+      "startDate": "2018-03-09",
+      "endDate": "2018-03-12",
+      "planeTicketPrice": "157",
+      "costOfFood": "359",
+      "costOnHotel": "168",
+      "noteDetails": "Went to Miami with the boys. Rented a yacht as a group. Went to downtown and partied.",
+      "overallExperience": "😃",
+      "userId": 8,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613968124/ZuringTheWorld/rc0llvpj7qesfp1mpztj.jpg",
+      "id": 36
+    },
+    {
+      "location": "Atlanta, GA",
+      "startDate": "2020-01-08",
+      "endDate": "2020-01-11",
+      "planeTicketPrice": "78",
+      "costOfFood": "289",
+      "costOnHotel": "112",
+      "noteDetails": "Visited Atlanta with the sis. Went to Central Olympic Park and took pictures. We ate some fye Ethiopian food and visited TI's museum.",
+      "overallExperience": "😃",
+      "userId": 8,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1613968335/ZuringTheWorld/bz5tvxmyhaif3tm89ku9.jpg",
+      "id": 37
+    },
+    {
+      "id": 39,
+      "location": "Washington, DC",
+      "startDate": "2020-12-25",
+      "endDate": "2020-12-28",
+      "planeTicketPrice": "167",
+      "costOfFood": "258",
+      "costOnHotel": "157",
+      "noteDetails": "I went to New York for my sister's 25th birthday. During our time there, we went out on multiple nights and walked for many hours in the infamous Times Square and ate a lot of desserts. We went to Bryant park on our last day and got to see one of the most beautiful sunrise.",
+      "overallExperience": "😊",
+      "userId": 2,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1614057748/ZuringTheWorld/m9jlvmmrz3vuehqyg7go.jpg"
+    },
+    {
+      "id": 40,
+      "location": "Washington, DC",
+      "startDate": "2020-12-03",
+      "endDate": "2020-12-06",
+      "planeTicketPrice": "179",
+      "costOfFood": "210",
+      "costOnHotel": "177",
+      "noteDetails": "I went to New York for my sister's 25th birthday. During our time there, we went out on multiple nights and walked for many hours in the infamous Times Square and ate a lot of desserts. We went to Bryant park on our last day and got to see one of the most beautiful sunrise.",
+      "overallExperience": "😃",
+      "userId": 1,
+      "imageURL": "https://res.cloudinary.com/sosina/image/upload/v1614095730/ZuringTheWorld/ueih9u4rgf74e6nkevjq.png"
+    }
+  ],
+  "futureTrips": [
+    {
+      "userId": 7,
+      "travelNoteId": 29,
+      "id": 21
+    },
+    {
+      "userId": 7,
+      "travelNoteId": 14,
+      "id": 22
+    },
+    {
+      "userId": 7,
+      "travelNoteId": 2,
+      "id": 23
+    },
+    {
+      "userId": 2,
+      "travelNoteId": 29,
+      "id": 24
+    },
+    {
+      "userId": 2,
+      "travelNoteId": 28,
+      "id": 25
+    },
+    {
+      "userId": 2,
+      "travelNoteId": 27,
+      "id": 26
+    },
+    {
+      "userId": 8,
+      "travelNoteId": 12,
+      "id": 27
+    },
+    {
+      "userId": 6,
+      "travelNoteId": 29,
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "travelNoteId": 4,
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "travelNoteId": 22,
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "travelNoteId": 31,
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "travelNoteId": 34,
+      "id": 34
+    }
+  ]
+}
