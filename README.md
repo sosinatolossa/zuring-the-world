@@ -65,7 +65,7 @@ When a user want to read about other cities, they will just have to look on the 
     json-server -p 8088 -w database.json
   ```
 
-  Now that the server is up and running, you should be able to register and login. If not, you can open an internet browser and access the application
+  Now that the server is up and running, you should be able to register and login. If not, you can open an internet browser and access the application at
   ```sh
     http://localhost:3000/
   ```
